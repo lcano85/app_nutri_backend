@@ -15,7 +15,7 @@ coverage/
 .nyc_output
 
 # Build output
-dist/
+# dist/ se versiona porque este repositorio contiene el backend compilado.
 build/Release
 
 # TypeScript cache

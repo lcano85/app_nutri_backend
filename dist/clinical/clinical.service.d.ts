@@ -1,0 +1,1022 @@
+import { Prisma } from '@prisma/client';
+import { PrismaService } from '../prisma/prisma.service';
+import { ActivityLogDto, AppointmentDto, DiaryEntryDto, FoodDto, FoodSubstitutionDto, GoalDto, MealPlanDto, MeasurementDto, MessageDto, PatientDocumentDto, PaymentDto, RecipeDto, ResourceDto, WaterLogDto } from './dto/clinical.dto';
+export declare class ClinicalService {
+    private prisma;
+    constructor(prisma: PrismaService);
+    appointments(userId: string): Prisma.PrismaPromise<({
+        patient: {
+            user: {
+                firstName: string;
+                lastName: string;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            userId: string | null;
+            phone: string | null;
+            birthDate: Date | null;
+            heightCm: Prisma.Decimal | null;
+            allergies: Prisma.JsonValue;
+            conditions: Prisma.JsonValue;
+            acquisitionSource: string | null;
+            sourceDetail: string | null;
+            notes: string | null;
+            nutritionistId: string;
+            documentNumber: string | null;
+            sex: string | null;
+            dietaryPreferences: Prisma.JsonValue;
+        };
+    } & {
+        status: import(".prisma/client").$Enums.AppointmentStatus;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        reason: string | null;
+        notes: string | null;
+        nutritionistId: string;
+        patientId: string;
+        startsAt: Date;
+        endsAt: Date;
+        consultationType: string;
+        meetingProvider: string | null;
+        meetingUrl: string | null;
+        reminderMinutes: number;
+    })[]>;
+    validateAppointmentSchedule(nutritionistId: string, d: AppointmentDto, excludeId?: string): Promise<{
+        startsAt: Date;
+        endsAt: Date;
+    }>;
+    createAppointment(userId: string, d: AppointmentDto): Promise<{
+        status: import(".prisma/client").$Enums.AppointmentStatus;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        reason: string | null;
+        notes: string | null;
+        nutritionistId: string;
+        patientId: string;
+        startsAt: Date;
+        endsAt: Date;
+        consultationType: string;
+        meetingProvider: string | null;
+        meetingUrl: string | null;
+        reminderMinutes: number;
+    }>;
+    updateAppointment(userId: string, id: string, d: AppointmentDto): Promise<{
+        status: import(".prisma/client").$Enums.AppointmentStatus;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        reason: string | null;
+        notes: string | null;
+        nutritionistId: string;
+        patientId: string;
+        startsAt: Date;
+        endsAt: Date;
+        consultationType: string;
+        meetingProvider: string | null;
+        meetingUrl: string | null;
+        reminderMinutes: number;
+    }>;
+    deleteAppointment(id: string): Prisma.Prisma__AppointmentClient<{
+        status: import(".prisma/client").$Enums.AppointmentStatus;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        reason: string | null;
+        notes: string | null;
+        nutritionistId: string;
+        patientId: string;
+        startsAt: Date;
+        endsAt: Date;
+        consultationType: string;
+        meetingProvider: string | null;
+        meetingUrl: string | null;
+        reminderMinutes: number;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    measurements(userId: string): Prisma.PrismaPromise<({
+        patient: {
+            user: {
+                firstName: string;
+                lastName: string;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            userId: string | null;
+            phone: string | null;
+            birthDate: Date | null;
+            heightCm: Prisma.Decimal | null;
+            allergies: Prisma.JsonValue;
+            conditions: Prisma.JsonValue;
+            acquisitionSource: string | null;
+            sourceDetail: string | null;
+            notes: string | null;
+            nutritionistId: string;
+            documentNumber: string | null;
+            sex: string | null;
+            dietaryPreferences: Prisma.JsonValue;
+        };
+    } & {
+        id: string;
+        notes: string | null;
+        measuredAt: Date;
+        patientId: string;
+        weightKg: Prisma.Decimal;
+        bodyFatPct: Prisma.Decimal | null;
+        waistCm: Prisma.Decimal | null;
+    })[]>;
+    createMeasurement(d: MeasurementDto): Prisma.Prisma__MeasurementClient<{
+        id: string;
+        notes: string | null;
+        measuredAt: Date;
+        patientId: string;
+        weightKg: Prisma.Decimal;
+        bodyFatPct: Prisma.Decimal | null;
+        waistCm: Prisma.Decimal | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deleteMeasurement(id: string): Prisma.Prisma__MeasurementClient<{
+        id: string;
+        notes: string | null;
+        measuredAt: Date;
+        patientId: string;
+        weightKg: Prisma.Decimal;
+        bodyFatPct: Prisma.Decimal | null;
+        waistCm: Prisma.Decimal | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    recipes(userId: string): Prisma.PrismaPromise<{
+        description: string | null;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        active: boolean;
+        nutritionistId: string;
+        ingredients: Prisma.JsonValue;
+        instructions: string;
+        servings: number;
+        preparationMinutes: number | null;
+        calories: Prisma.Decimal | null;
+        proteinGrams: Prisma.Decimal | null;
+        carbohydrateGrams: Prisma.Decimal | null;
+        fatGrams: Prisma.Decimal | null;
+    }[]>;
+    createRecipe(userId: string, d: RecipeDto): Prisma.Prisma__RecipeClient<{
+        description: string | null;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        active: boolean;
+        nutritionistId: string;
+        ingredients: Prisma.JsonValue;
+        instructions: string;
+        servings: number;
+        preparationMinutes: number | null;
+        calories: Prisma.Decimal | null;
+        proteinGrams: Prisma.Decimal | null;
+        carbohydrateGrams: Prisma.Decimal | null;
+        fatGrams: Prisma.Decimal | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    updateRecipe(id: string, d: RecipeDto): Prisma.Prisma__RecipeClient<{
+        description: string | null;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        active: boolean;
+        nutritionistId: string;
+        ingredients: Prisma.JsonValue;
+        instructions: string;
+        servings: number;
+        preparationMinutes: number | null;
+        calories: Prisma.Decimal | null;
+        proteinGrams: Prisma.Decimal | null;
+        carbohydrateGrams: Prisma.Decimal | null;
+        fatGrams: Prisma.Decimal | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deleteRecipe(id: string): Prisma.Prisma__RecipeClient<{
+        description: string | null;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        active: boolean;
+        nutritionistId: string;
+        ingredients: Prisma.JsonValue;
+        instructions: string;
+        servings: number;
+        preparationMinutes: number | null;
+        calories: Prisma.Decimal | null;
+        proteinGrams: Prisma.Decimal | null;
+        carbohydrateGrams: Prisma.Decimal | null;
+        fatGrams: Prisma.Decimal | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    plans(userId: string): Prisma.PrismaPromise<({
+        patient: {
+            user: {
+                firstName: string;
+                lastName: string;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            userId: string | null;
+            phone: string | null;
+            birthDate: Date | null;
+            heightCm: Prisma.Decimal | null;
+            allergies: Prisma.JsonValue;
+            conditions: Prisma.JsonValue;
+            acquisitionSource: string | null;
+            sourceDetail: string | null;
+            notes: string | null;
+            nutritionistId: string;
+            documentNumber: string | null;
+            sex: string | null;
+            dietaryPreferences: Prisma.JsonValue;
+        };
+    } & {
+        status: string;
+        description: string | null;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        nutritionistId: string;
+        patientId: string;
+        startsAt: Date;
+        endsAt: Date | null;
+        targetCalories: number | null;
+        targetProteinGrams: Prisma.Decimal | null;
+        targetCarbohydrateGrams: Prisma.Decimal | null;
+        targetFatGrams: Prisma.Decimal | null;
+        meals: Prisma.JsonValue;
+        recommendations: string | null;
+    })[]>;
+    createPlan(userId: string, d: MealPlanDto): Prisma.Prisma__MealPlanClient<{
+        status: string;
+        description: string | null;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        nutritionistId: string;
+        patientId: string;
+        startsAt: Date;
+        endsAt: Date | null;
+        targetCalories: number | null;
+        targetProteinGrams: Prisma.Decimal | null;
+        targetCarbohydrateGrams: Prisma.Decimal | null;
+        targetFatGrams: Prisma.Decimal | null;
+        meals: Prisma.JsonValue;
+        recommendations: string | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    updatePlan(id: string, d: MealPlanDto): Prisma.Prisma__MealPlanClient<{
+        status: string;
+        description: string | null;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        nutritionistId: string;
+        patientId: string;
+        startsAt: Date;
+        endsAt: Date | null;
+        targetCalories: number | null;
+        targetProteinGrams: Prisma.Decimal | null;
+        targetCarbohydrateGrams: Prisma.Decimal | null;
+        targetFatGrams: Prisma.Decimal | null;
+        meals: Prisma.JsonValue;
+        recommendations: string | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deletePlan(id: string): Prisma.Prisma__MealPlanClient<{
+        status: string;
+        description: string | null;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        nutritionistId: string;
+        patientId: string;
+        startsAt: Date;
+        endsAt: Date | null;
+        targetCalories: number | null;
+        targetProteinGrams: Prisma.Decimal | null;
+        targetCarbohydrateGrams: Prisma.Decimal | null;
+        targetFatGrams: Prisma.Decimal | null;
+        meals: Prisma.JsonValue;
+        recommendations: string | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    goals(userId: string): Prisma.PrismaPromise<({
+        patient: {
+            user: {
+                firstName: string;
+                lastName: string;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            userId: string | null;
+            phone: string | null;
+            birthDate: Date | null;
+            heightCm: Prisma.Decimal | null;
+            allergies: Prisma.JsonValue;
+            conditions: Prisma.JsonValue;
+            acquisitionSource: string | null;
+            sourceDetail: string | null;
+            notes: string | null;
+            nutritionistId: string;
+            documentNumber: string | null;
+            sex: string | null;
+            dietaryPreferences: Prisma.JsonValue;
+        };
+    } & {
+        status: string;
+        description: string | null;
+        title: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        patientId: string;
+        targetValue: Prisma.Decimal | null;
+        currentValue: Prisma.Decimal | null;
+        unit: string | null;
+        dueDate: Date | null;
+    })[]>;
+    createGoal(d: GoalDto): Prisma.Prisma__GoalClient<{
+        status: string;
+        description: string | null;
+        title: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        patientId: string;
+        targetValue: Prisma.Decimal | null;
+        currentValue: Prisma.Decimal | null;
+        unit: string | null;
+        dueDate: Date | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    updateGoal(id: string, d: GoalDto): Prisma.Prisma__GoalClient<{
+        status: string;
+        description: string | null;
+        title: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        patientId: string;
+        targetValue: Prisma.Decimal | null;
+        currentValue: Prisma.Decimal | null;
+        unit: string | null;
+        dueDate: Date | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deleteGoal(id: string): Prisma.Prisma__GoalClient<{
+        status: string;
+        description: string | null;
+        title: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        patientId: string;
+        targetValue: Prisma.Decimal | null;
+        currentValue: Prisma.Decimal | null;
+        unit: string | null;
+        dueDate: Date | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    diary(userId: string): Prisma.PrismaPromise<({
+        patient: {
+            user: {
+                firstName: string;
+                lastName: string;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            userId: string | null;
+            phone: string | null;
+            birthDate: Date | null;
+            heightCm: Prisma.Decimal | null;
+            allergies: Prisma.JsonValue;
+            conditions: Prisma.JsonValue;
+            acquisitionSource: string | null;
+            sourceDetail: string | null;
+            notes: string | null;
+            nutritionistId: string;
+            documentNumber: string | null;
+            sex: string | null;
+            dietaryPreferences: Prisma.JsonValue;
+        };
+    } & {
+        description: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        notes: string | null;
+        patientId: string;
+        calories: number | null;
+        occurredAt: Date;
+        mealType: string;
+        waterMl: number | null;
+        mood: string | null;
+    })[]>;
+    createDiary(d: DiaryEntryDto): Prisma.Prisma__FoodDiaryEntryClient<{
+        description: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        notes: string | null;
+        patientId: string;
+        calories: number | null;
+        occurredAt: Date;
+        mealType: string;
+        waterMl: number | null;
+        mood: string | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deleteDiary(id: string): Prisma.Prisma__FoodDiaryEntryClient<{
+        description: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        notes: string | null;
+        patientId: string;
+        calories: number | null;
+        occurredAt: Date;
+        mealType: string;
+        waterMl: number | null;
+        mood: string | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    foods(): Prisma.PrismaPromise<{
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        active: boolean;
+        calories: Prisma.Decimal;
+        proteinGrams: Prisma.Decimal;
+        carbohydrateGrams: Prisma.Decimal;
+        fatGrams: Prisma.Decimal;
+        category: string | null;
+        servingName: string;
+        servingGrams: Prisma.Decimal;
+        fiberGrams: Prisma.Decimal;
+        sodiumMg: Prisma.Decimal;
+    }[]>;
+    createFood(d: FoodDto): Prisma.Prisma__FoodClient<{
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        active: boolean;
+        calories: Prisma.Decimal;
+        proteinGrams: Prisma.Decimal;
+        carbohydrateGrams: Prisma.Decimal;
+        fatGrams: Prisma.Decimal;
+        category: string | null;
+        servingName: string;
+        servingGrams: Prisma.Decimal;
+        fiberGrams: Prisma.Decimal;
+        sodiumMg: Prisma.Decimal;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    updateFood(id: string, d: FoodDto): Prisma.Prisma__FoodClient<{
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        active: boolean;
+        calories: Prisma.Decimal;
+        proteinGrams: Prisma.Decimal;
+        carbohydrateGrams: Prisma.Decimal;
+        fatGrams: Prisma.Decimal;
+        category: string | null;
+        servingName: string;
+        servingGrams: Prisma.Decimal;
+        fiberGrams: Prisma.Decimal;
+        sodiumMg: Prisma.Decimal;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deleteFood(id: string): Prisma.Prisma__FoodClient<{
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        active: boolean;
+        calories: Prisma.Decimal;
+        proteinGrams: Prisma.Decimal;
+        carbohydrateGrams: Prisma.Decimal;
+        fatGrams: Prisma.Decimal;
+        category: string | null;
+        servingName: string;
+        servingGrams: Prisma.Decimal;
+        fiberGrams: Prisma.Decimal;
+        sodiumMg: Prisma.Decimal;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    substitutions(): Prisma.PrismaPromise<({
+        food: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            name: string;
+            active: boolean;
+            calories: Prisma.Decimal;
+            proteinGrams: Prisma.Decimal;
+            carbohydrateGrams: Prisma.Decimal;
+            fatGrams: Prisma.Decimal;
+            category: string | null;
+            servingName: string;
+            servingGrams: Prisma.Decimal;
+            fiberGrams: Prisma.Decimal;
+            sodiumMg: Prisma.Decimal;
+        };
+        substituteFood: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            name: string;
+            active: boolean;
+            calories: Prisma.Decimal;
+            proteinGrams: Prisma.Decimal;
+            carbohydrateGrams: Prisma.Decimal;
+            fatGrams: Prisma.Decimal;
+            category: string | null;
+            servingName: string;
+            servingGrams: Prisma.Decimal;
+            fiberGrams: Prisma.Decimal;
+            sodiumMg: Prisma.Decimal;
+        };
+    } & {
+        id: string;
+        notes: string | null;
+        foodId: string;
+        substituteFoodId: string;
+        equivalentType: string;
+        foodQuantityGrams: Prisma.Decimal;
+        substituteQuantityGrams: Prisma.Decimal;
+    })[]>;
+    createSubstitution(d: FoodSubstitutionDto): Prisma.Prisma__FoodSubstitutionClient<{
+        id: string;
+        notes: string | null;
+        foodId: string;
+        substituteFoodId: string;
+        equivalentType: string;
+        foodQuantityGrams: Prisma.Decimal;
+        substituteQuantityGrams: Prisma.Decimal;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deleteSubstitution(id: string): Prisma.Prisma__FoodSubstitutionClient<{
+        id: string;
+        notes: string | null;
+        foodId: string;
+        substituteFoodId: string;
+        equivalentType: string;
+        foodQuantityGrams: Prisma.Decimal;
+        substituteQuantityGrams: Prisma.Decimal;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    messages(userId: string): Prisma.PrismaPromise<({
+        patient: {
+            user: {
+                firstName: string;
+                lastName: string;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            userId: string | null;
+            phone: string | null;
+            birthDate: Date | null;
+            heightCm: Prisma.Decimal | null;
+            allergies: Prisma.JsonValue;
+            conditions: Prisma.JsonValue;
+            acquisitionSource: string | null;
+            sourceDetail: string | null;
+            notes: string | null;
+            nutritionistId: string;
+            documentNumber: string | null;
+            sex: string | null;
+            dietaryPreferences: Prisma.JsonValue;
+        };
+    } & {
+        id: string;
+        createdAt: Date;
+        patientId: string;
+        content: string;
+        senderId: string;
+        readAt: Date | null;
+    })[]>;
+    createMessage(userId: string, d: MessageDto): Prisma.Prisma__MessageClient<{
+        id: string;
+        createdAt: Date;
+        patientId: string;
+        content: string;
+        senderId: string;
+        readAt: Date | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deleteMessage(id: string): Prisma.Prisma__MessageClient<{
+        id: string;
+        createdAt: Date;
+        patientId: string;
+        content: string;
+        senderId: string;
+        readAt: Date | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    payments(userId: string): Prisma.PrismaPromise<({
+        patient: {
+            user: {
+                firstName: string;
+                lastName: string;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            userId: string | null;
+            phone: string | null;
+            birthDate: Date | null;
+            heightCm: Prisma.Decimal | null;
+            allergies: Prisma.JsonValue;
+            conditions: Prisma.JsonValue;
+            acquisitionSource: string | null;
+            sourceDetail: string | null;
+            notes: string | null;
+            nutritionistId: string;
+            documentNumber: string | null;
+            sex: string | null;
+            dietaryPreferences: Prisma.JsonValue;
+        };
+    } & {
+        status: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        patientId: string;
+        dueDate: Date | null;
+        concept: string;
+        amount: Prisma.Decimal;
+        currency: string;
+        method: string | null;
+        paidAt: Date | null;
+        reference: string | null;
+    })[]>;
+    createPayment(d: PaymentDto): Prisma.Prisma__PaymentClient<{
+        status: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        patientId: string;
+        dueDate: Date | null;
+        concept: string;
+        amount: Prisma.Decimal;
+        currency: string;
+        method: string | null;
+        paidAt: Date | null;
+        reference: string | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    updatePayment(id: string, d: PaymentDto): Prisma.Prisma__PaymentClient<{
+        status: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        patientId: string;
+        dueDate: Date | null;
+        concept: string;
+        amount: Prisma.Decimal;
+        currency: string;
+        method: string | null;
+        paidAt: Date | null;
+        reference: string | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deletePayment(id: string): Prisma.Prisma__PaymentClient<{
+        status: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        patientId: string;
+        dueDate: Date | null;
+        concept: string;
+        amount: Prisma.Decimal;
+        currency: string;
+        method: string | null;
+        paidAt: Date | null;
+        reference: string | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    resources(userId: string): Prisma.PrismaPromise<{
+        type: string;
+        title: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        active: boolean;
+        nutritionistId: string;
+        category: string | null;
+        content: string | null;
+        url: string | null;
+    }[]>;
+    createResource(userId: string, d: ResourceDto): Prisma.Prisma__EducationalResourceClient<{
+        type: string;
+        title: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        active: boolean;
+        nutritionistId: string;
+        category: string | null;
+        content: string | null;
+        url: string | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    updateResource(id: string, d: ResourceDto): Prisma.Prisma__EducationalResourceClient<{
+        type: string;
+        title: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        active: boolean;
+        nutritionistId: string;
+        category: string | null;
+        content: string | null;
+        url: string | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deleteResource(id: string): Prisma.Prisma__EducationalResourceClient<{
+        type: string;
+        title: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        active: boolean;
+        nutritionistId: string;
+        category: string | null;
+        content: string | null;
+        url: string | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    documents(userId: string): Prisma.PrismaPromise<({
+        patient: {
+            user: {
+                firstName: string;
+                lastName: string;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            userId: string | null;
+            phone: string | null;
+            birthDate: Date | null;
+            heightCm: Prisma.Decimal | null;
+            allergies: Prisma.JsonValue;
+            conditions: Prisma.JsonValue;
+            acquisitionSource: string | null;
+            sourceDetail: string | null;
+            notes: string | null;
+            nutritionistId: string;
+            documentNumber: string | null;
+            sex: string | null;
+            dietaryPreferences: Prisma.JsonValue;
+        };
+    } & {
+        id: string;
+        createdAt: Date;
+        name: string;
+        notes: string | null;
+        patientId: string;
+        category: string | null;
+        url: string;
+    })[]>;
+    createDocument(d: PatientDocumentDto): Prisma.Prisma__PatientDocumentClient<{
+        id: string;
+        createdAt: Date;
+        name: string;
+        notes: string | null;
+        patientId: string;
+        category: string | null;
+        url: string;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deleteDocument(id: string): Prisma.Prisma__PatientDocumentClient<{
+        id: string;
+        createdAt: Date;
+        name: string;
+        notes: string | null;
+        patientId: string;
+        category: string | null;
+        url: string;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    waterLogs(userId: string): Prisma.PrismaPromise<({
+        patient: {
+            user: {
+                firstName: string;
+                lastName: string;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            userId: string | null;
+            phone: string | null;
+            birthDate: Date | null;
+            heightCm: Prisma.Decimal | null;
+            allergies: Prisma.JsonValue;
+            conditions: Prisma.JsonValue;
+            acquisitionSource: string | null;
+            sourceDetail: string | null;
+            notes: string | null;
+            nutritionistId: string;
+            documentNumber: string | null;
+            sex: string | null;
+            dietaryPreferences: Prisma.JsonValue;
+        };
+    } & {
+        id: string;
+        patientId: string;
+        occurredAt: Date;
+        amountMl: number;
+    })[]>;
+    createWaterLog(d: WaterLogDto): Prisma.Prisma__WaterLogClient<{
+        id: string;
+        patientId: string;
+        occurredAt: Date;
+        amountMl: number;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deleteWaterLog(id: string): Prisma.Prisma__WaterLogClient<{
+        id: string;
+        patientId: string;
+        occurredAt: Date;
+        amountMl: number;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    activityLogs(userId: string): Prisma.PrismaPromise<({
+        patient: {
+            user: {
+                firstName: string;
+                lastName: string;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            userId: string | null;
+            phone: string | null;
+            birthDate: Date | null;
+            heightCm: Prisma.Decimal | null;
+            allergies: Prisma.JsonValue;
+            conditions: Prisma.JsonValue;
+            acquisitionSource: string | null;
+            sourceDetail: string | null;
+            notes: string | null;
+            nutritionistId: string;
+            documentNumber: string | null;
+            sex: string | null;
+            dietaryPreferences: Prisma.JsonValue;
+        };
+    } & {
+        id: string;
+        notes: string | null;
+        patientId: string;
+        occurredAt: Date;
+        activity: string;
+        durationMinutes: number;
+        caloriesBurned: number | null;
+    })[]>;
+    createActivityLog(d: ActivityLogDto): Prisma.Prisma__ActivityLogClient<{
+        id: string;
+        notes: string | null;
+        patientId: string;
+        occurredAt: Date;
+        activity: string;
+        durationMinutes: number;
+        caloriesBurned: number | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    deleteActivityLog(id: string): Prisma.Prisma__ActivityLogClient<{
+        id: string;
+        notes: string | null;
+        patientId: string;
+        occurredAt: Date;
+        activity: string;
+        durationMinutes: number;
+        caloriesBurned: number | null;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+    portal(patientId: string): Prisma.Prisma__PatientClient<{
+        user: {
+            email: string;
+            firstName: string;
+            lastName: string;
+        } | null;
+        mealPlans: {
+            status: string;
+            description: string | null;
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            name: string;
+            nutritionistId: string;
+            patientId: string;
+            startsAt: Date;
+            endsAt: Date | null;
+            targetCalories: number | null;
+            targetProteinGrams: Prisma.Decimal | null;
+            targetCarbohydrateGrams: Prisma.Decimal | null;
+            targetFatGrams: Prisma.Decimal | null;
+            meals: Prisma.JsonValue;
+            recommendations: string | null;
+        }[];
+        measurements: {
+            id: string;
+            notes: string | null;
+            measuredAt: Date;
+            patientId: string;
+            weightKg: Prisma.Decimal;
+            bodyFatPct: Prisma.Decimal | null;
+            waistCm: Prisma.Decimal | null;
+        }[];
+        appointments: {
+            status: import(".prisma/client").$Enums.AppointmentStatus;
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            reason: string | null;
+            notes: string | null;
+            nutritionistId: string;
+            patientId: string;
+            startsAt: Date;
+            endsAt: Date;
+            consultationType: string;
+            meetingProvider: string | null;
+            meetingUrl: string | null;
+            reminderMinutes: number;
+        }[];
+        goals: {
+            status: string;
+            description: string | null;
+            title: string;
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            patientId: string;
+            targetValue: Prisma.Decimal | null;
+            currentValue: Prisma.Decimal | null;
+            unit: string | null;
+            dueDate: Date | null;
+        }[];
+        diaryEntries: {
+            description: string;
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            notes: string | null;
+            patientId: string;
+            calories: number | null;
+            occurredAt: Date;
+            mealType: string;
+            waterMl: number | null;
+            mood: string | null;
+        }[];
+        messages: {
+            id: string;
+            createdAt: Date;
+            patientId: string;
+            content: string;
+            senderId: string;
+            readAt: Date | null;
+        }[];
+        documents: {
+            id: string;
+            createdAt: Date;
+            name: string;
+            notes: string | null;
+            patientId: string;
+            category: string | null;
+            url: string;
+        }[];
+        waterLogs: {
+            id: string;
+            patientId: string;
+            occurredAt: Date;
+            amountMl: number;
+        }[];
+        activityLogs: {
+            id: string;
+            notes: string | null;
+            patientId: string;
+            occurredAt: Date;
+            activity: string;
+            durationMinutes: number;
+            caloriesBurned: number | null;
+        }[];
+    } & {
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        userId: string | null;
+        phone: string | null;
+        birthDate: Date | null;
+        heightCm: Prisma.Decimal | null;
+        allergies: Prisma.JsonValue;
+        conditions: Prisma.JsonValue;
+        acquisitionSource: string | null;
+        sourceDetail: string | null;
+        notes: string | null;
+        nutritionistId: string;
+        documentNumber: string | null;
+        sex: string | null;
+        dietaryPreferences: Prisma.JsonValue;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, Prisma.PrismaClientOptions>;
+}
