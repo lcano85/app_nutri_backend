@@ -1,0 +1,436 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum AppointmentStatus {
+  SCHEDULED
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+model User {
+  id               String   @id @default(uuid())
+  email            String   @unique
+  passwordHash     String
+  firstName        String
+  lastName         String
+  roleId           String
+  statusId         String
+  refreshTokenHash String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  nutritionistPatients       Patient[]             @relation("NutritionistPatients")
+  patientProfile             Patient?              @relation("PatientUser")
+  appointmentsAsNutritionist Appointment[]         @relation("NutritionistAppointments")
+  role                       Role                  @relation(fields: [roleId], references: [id])
+  status                     Status                @relation(fields: [statusId], references: [id])
+  loginLogs                  LoginLog[]
+  recipes                    Recipe[]
+  mealPlans                  MealPlan[]            @relation("NutritionistMealPlans")
+  sentMessages               Message[]
+  educationalResources       EducationalResource[]
+
+  @@index([roleId])
+  @@index([statusId])
+  @@map("user")
+}
+
+model Status {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  code        String   @unique
+  description String?
+  color       String   @default("emerald")
+  active      Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  users User[]
+
+  @@map("status")
+}
+
+model Role {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  code        String   @unique
+  description String?
+  isSystem    Boolean  @default(false)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  users       User[]
+  permissions RolePermission[]
+
+  @@map("role")
+}
+
+model Permission {
+  id          String   @id @default(uuid())
+  name        String
+  code        String   @unique
+  module      String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  roles     RolePermission[]
+  menuItems MenuItem[]
+
+  @@index([module])
+  @@map("permission")
+}
+
+model MenuItem {
+  id           String   @id @default(uuid())
+  name         String
+  icon         String   @default("Circle")
+  path         String?
+  sortOrder    Int      @default(0)
+  active       Boolean  @default(true)
+  parentId     String?
+  permissionId String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  parent     MenuItem?   @relation("MenuHierarchy", fields: [parentId], references: [id], onDelete: Cascade)
+  children   MenuItem[]  @relation("MenuHierarchy")
+  permission Permission? @relation(fields: [permissionId], references: [id], onDelete: SetNull)
+
+  @@index([parentId])
+  @@index([permissionId])
+  @@map("menuitem")
+}
+
+model RolePermission {
+  roleId       String
+  permissionId String
+
+  role       Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  @@id([roleId, permissionId])
+  @@map("rolepermission")
+}
+
+model LoginLog {
+  id        String   @id @default(uuid())
+  userId    String?
+  email     String
+  success   Boolean
+  ipAddress String?
+  userAgent String?
+  reason    String?
+  createdAt DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([createdAt])
+  @@index([userId])
+  @@map("loginlog")
+}
+
+model Patient {
+  id                 String    @id @default(uuid())
+  userId             String?   @unique
+  nutritionistId     String
+  documentNumber     String?
+  phone              String?
+  birthDate          DateTime?
+  sex                String?
+  heightCm           Decimal?  @db.Decimal(5, 2)
+  allergies          Json
+  conditions         Json
+  dietaryPreferences Json
+  acquisitionSource  String?
+  sourceDetail       String?
+  notes              String?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+
+  user         User?             @relation("PatientUser", fields: [userId], references: [id])
+  nutritionist User              @relation("NutritionistPatients", fields: [nutritionistId], references: [id])
+  measurements Measurement[]
+  appointments Appointment[]
+  mealPlans    MealPlan[]
+  goals        Goal[]
+  diaryEntries FoodDiaryEntry[]
+  messages     Message[]
+  payments     Payment[]
+  documents    PatientDocument[]
+  waterLogs    WaterLog[]
+  activityLogs ActivityLog[]
+
+  @@index([nutritionistId])
+  @@map("patient")
+}
+
+model Measurement {
+  id         String   @id @default(uuid())
+  patientId  String
+  measuredAt DateTime @default(now())
+  weightKg   Decimal  @db.Decimal(5, 2)
+  bodyFatPct Decimal? @db.Decimal(5, 2)
+  waistCm    Decimal? @db.Decimal(5, 2)
+  notes      String?
+
+  patient Patient @relation(fields: [patientId], references: [id], onDelete: Cascade)
+
+  @@index([patientId, measuredAt])
+  @@map("measurement")
+}
+
+model Appointment {
+  id               String            @id @default(uuid())
+  patientId        String
+  nutritionistId   String
+  startsAt         DateTime
+  endsAt           DateTime
+  status           AppointmentStatus @default(SCHEDULED)
+  reason           String?
+  notes            String?
+  consultationType String            @default("PRESENCIAL")
+  meetingProvider  String?
+  meetingUrl       String?
+  reminderMinutes  Int               @default(1440)
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+
+  patient      Patient @relation(fields: [patientId], references: [id])
+  nutritionist User    @relation("NutritionistAppointments", fields: [nutritionistId], references: [id])
+
+  @@index([nutritionistId, startsAt])
+  @@map("appointment")
+}
+
+model Food {
+  id                String   @id @default(uuid())
+  name              String
+  category          String?
+  servingName       String   @default("100 gramos")
+  servingGrams      Decimal  @default(100) @db.Decimal(8, 2)
+  calories          Decimal  @db.Decimal(8, 2)
+  proteinGrams      Decimal  @default(0) @db.Decimal(8, 2)
+  carbohydrateGrams Decimal  @default(0) @db.Decimal(8, 2)
+  fatGrams          Decimal  @default(0) @db.Decimal(8, 2)
+  fiberGrams        Decimal  @default(0) @db.Decimal(8, 2)
+  sodiumMg          Decimal  @default(0) @db.Decimal(8, 2)
+  active            Boolean  @default(true)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  substitutionsFrom FoodSubstitution[] @relation("MainFood")
+  substitutionsTo   FoodSubstitution[] @relation("SubstituteFood")
+
+  @@index([name])
+  @@index([category])
+  @@map("food")
+}
+
+model FoodSubstitution {
+  id                      String  @id @default(uuid())
+  foodId                  String
+  substituteFoodId        String
+  equivalentType          String  @default("ENERGIA")
+  foodQuantityGrams       Decimal @db.Decimal(8, 2)
+  substituteQuantityGrams Decimal @db.Decimal(8, 2)
+  notes                   String?
+
+  food           Food @relation("MainFood", fields: [foodId], references: [id], onDelete: Cascade)
+  substituteFood Food @relation("SubstituteFood", fields: [substituteFoodId], references: [id], onDelete: Cascade)
+
+  @@unique([foodId, substituteFoodId])
+  @@map("foodsubstitution")
+}
+
+model Message {
+  id        String    @id @default(uuid())
+  patientId String
+  senderId  String
+  content   String
+  readAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  patient Patient @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  sender  User    @relation(fields: [senderId], references: [id])
+
+  @@index([patientId, createdAt])
+  @@map("message")
+}
+
+model Payment {
+  id        String    @id @default(uuid())
+  patientId String
+  concept   String
+  amount    Decimal   @db.Decimal(10, 2)
+  currency  String    @default("PEN")
+  status    String    @default("PENDIENTE")
+  method    String?
+  dueDate   DateTime?
+  paidAt    DateTime?
+  reference String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  patient Patient @relation(fields: [patientId], references: [id], onDelete: Restrict)
+
+  @@index([patientId])
+  @@map("payment")
+}
+
+model EducationalResource {
+  id             String   @id @default(uuid())
+  nutritionistId String
+  title          String
+  category       String?
+  type           String   @default("ARTICULO")
+  content        String?
+  url            String?
+  active         Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  nutritionist User @relation(fields: [nutritionistId], references: [id])
+
+  @@index([nutritionistId])
+  @@map("educationalresource")
+}
+
+model PatientDocument {
+  id        String   @id @default(uuid())
+  patientId String
+  name      String
+  category  String?
+  url       String
+  notes     String?
+  createdAt DateTime @default(now())
+
+  patient Patient @relation(fields: [patientId], references: [id], onDelete: Cascade)
+
+  @@map("patientdocument")
+}
+
+model WaterLog {
+  id         String   @id @default(uuid())
+  patientId  String
+  occurredAt DateTime
+  amountMl   Int
+
+  patient Patient @relation(fields: [patientId], references: [id], onDelete: Cascade)
+
+  @@index([patientId, occurredAt])
+  @@map("waterlog")
+}
+
+model ActivityLog {
+  id              String   @id @default(uuid())
+  patientId       String
+  occurredAt      DateTime
+  activity        String
+  durationMinutes Int
+  caloriesBurned  Int?
+  notes           String?
+
+  patient Patient @relation(fields: [patientId], references: [id], onDelete: Cascade)
+
+  @@index([patientId, occurredAt])
+  @@map("activitylog")
+}
+
+model Recipe {
+  id                 String   @id @default(uuid())
+  nutritionistId     String
+  name               String
+  description        String?
+  ingredients        Json
+  instructions       String
+  servings           Int      @default(1)
+  preparationMinutes Int?
+  calories           Decimal? @db.Decimal(8, 2)
+  proteinGrams       Decimal? @db.Decimal(8, 2)
+  carbohydrateGrams  Decimal? @db.Decimal(8, 2)
+  fatGrams           Decimal? @db.Decimal(8, 2)
+  active             Boolean  @default(true)
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  nutritionist User @relation(fields: [nutritionistId], references: [id])
+
+  @@index([nutritionistId])
+  @@map("recipe")
+}
+
+model MealPlan {
+  id                      String    @id @default(uuid())
+  patientId               String
+  nutritionistId          String
+  name                    String
+  description             String?
+  startsAt                DateTime
+  endsAt                  DateTime?
+  status                  String    @default("BORRADOR")
+  targetCalories          Int?
+  targetProteinGrams      Decimal?  @db.Decimal(8, 2)
+  targetCarbohydrateGrams Decimal?  @db.Decimal(8, 2)
+  targetFatGrams          Decimal?  @db.Decimal(8, 2)
+  meals                   Json
+  recommendations         String?
+  createdAt               DateTime  @default(now())
+  updatedAt               DateTime  @updatedAt
+
+  patient      Patient @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  nutritionist User    @relation("NutritionistMealPlans", fields: [nutritionistId], references: [id])
+
+  @@index([patientId])
+  @@index([nutritionistId])
+  @@map("mealplan")
+}
+
+model Goal {
+  id           String    @id @default(uuid())
+  patientId    String
+  title        String
+  description  String?
+  targetValue  Decimal?  @db.Decimal(10, 2)
+  currentValue Decimal?  @db.Decimal(10, 2)
+  unit         String?
+  status       String    @default("EN_PROGRESO")
+  dueDate      DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  patient Patient @relation(fields: [patientId], references: [id], onDelete: Cascade)
+
+  @@index([patientId])
+  @@map("goal")
+}
+
+model FoodDiaryEntry {
+  id          String   @id @default(uuid())
+  patientId   String
+  occurredAt  DateTime
+  mealType    String
+  description String
+  calories    Int?
+  waterMl     Int?
+  mood        String?
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  patient Patient @relation(fields: [patientId], references: [id], onDelete: Cascade)
+
+  @@index([patientId, occurredAt])
+  @@map("fooddiaryentry")
+}

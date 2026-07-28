@@ -1,0 +1,55 @@
+{
+  "name": "@nutricare/backend",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run build:prd",
+    "build:dev": "node --env-file=.env_dev node_modules/@nestjs/cli/bin/nest.js build",
+    "build:prd": "node --env-file=.env node_modules/@nestjs/cli/bin/nest.js build && node scripts/package-production.js",
+    "dev": "node --env-file=.env_dev --watch -r ts-node/register src/main.ts",
+    "prd": "node --env-file=.env app.js",
+    "start": "npm run prd",
+    "start:prod": "npm run prd",
+    "start:dev": "npm run dev",
+    "lint": "eslint \"src/**/*.ts\"",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "tsx prisma/seed.ts",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.28",
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/core": "^11.1.28",
+    "@nestjs/jwt": "^11.0.2",
+    "@nestjs/passport": "^11.0.5",
+    "@nestjs/platform-express": "^11.1.28",
+    "@nestjs/swagger": "^11.2.5",
+    "@nestjs/throttler": "^6.4.0",
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^3.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "cookie-parser": "^1.4.7",
+    "helmet": "^8.1.0",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "prisma": "^6.19.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.10",
+    "@types/cookie-parser": "^1.4.9",
+    "@types/express": "^5.0.5",
+    "@types/passport-jwt": "^4.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}
