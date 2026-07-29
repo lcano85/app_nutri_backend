@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ActivityLogDto = exports.WaterLogDto = exports.PatientDocumentDto = exports.ResourceDto = exports.PaymentDto = exports.MessageDto = exports.FoodSubstitutionDto = exports.FoodDto = exports.DiaryEntryDto = exports.GoalDto = exports.MealPlanDto = exports.RecipeDto = exports.MeasurementDto = exports.AppointmentDto = void 0;
+exports.ActivityLogDto = exports.WaterLogDto = exports.PatientDocumentDto = exports.ResourceDto = exports.PaymentDto = exports.MessageDto = exports.FoodSubstitutionDto = exports.DosificacionPreparacionDto = exports.IntercambioAlimentoDto = exports.TablaPeruanaAlimentoDto = exports.FoodDto = exports.DiaryEntryDto = exports.GoalDto = exports.MealPlanDto = exports.RecipeDto = exports.MeasurementDto = exports.AppointmentDto = void 0;
 const class_validator_1 = require("class-validator");
 class AppointmentDto {
     patientId;
@@ -395,6 +395,338 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], FoodDto.prototype, "sodiumMg", void 0);
+class TablaPeruanaAlimentoDto {
+    codigo;
+    codigo_grupo;
+    codigo_numero;
+    categoria_codigo;
+    nombre;
+    grupo;
+    estrato;
+    energia_kcal;
+    energia_kj;
+    agua_g;
+    proteina_g;
+    grasa_total_g;
+    carbohidratos_totales_g;
+    carbohidratos_disp_g;
+    fibra_dietaria_g;
+    cenizas_g;
+    calcio_mg;
+    fosforo_mg;
+    hierro_mg;
+    zinc_mg;
+    sodio_mg;
+    potasio_mg;
+    betacaroteno_ug;
+    vitamina_a_ug;
+    tiamina_mg;
+    riboflavina_mg;
+    niacina_mg;
+    vitamina_c_mg;
+    acido_folico_ug;
+    fuente;
+}
+exports.TablaPeruanaAlimentoDto = TablaPeruanaAlimentoDto;
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(1),
+    __metadata("design:type", String)
+], TablaPeruanaAlimentoDto.prototype, "codigo", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(1),
+    __metadata("design:type", String)
+], TablaPeruanaAlimentoDto.prototype, "codigo_grupo", void 0);
+__decorate([
+    (0, class_validator_1.IsInt)(),
+    (0, class_validator_1.Min)(1),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "codigo_numero", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(1),
+    __metadata("design:type", String)
+], TablaPeruanaAlimentoDto.prototype, "categoria_codigo", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(2),
+    __metadata("design:type", String)
+], TablaPeruanaAlimentoDto.prototype, "nombre", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], TablaPeruanaAlimentoDto.prototype, "grupo", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], TablaPeruanaAlimentoDto.prototype, "estrato", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "energia_kcal", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "energia_kj", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "agua_g", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "proteina_g", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "grasa_total_g", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "carbohidratos_totales_g", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "carbohidratos_disp_g", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "fibra_dietaria_g", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "cenizas_g", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "calcio_mg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "fosforo_mg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "hierro_mg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "zinc_mg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "sodio_mg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "potasio_mg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "betacaroteno_ug", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "vitamina_a_ug", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "tiamina_mg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "riboflavina_mg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "niacina_mg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "vitamina_c_mg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], TablaPeruanaAlimentoDto.prototype, "acido_folico_ug", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], TablaPeruanaAlimentoDto.prototype, "fuente", void 0);
+class IntercambioAlimentoDto {
+    codigo;
+    categoria_id;
+    subcategoria_id;
+    nombre;
+    peso_gramos;
+    medida_casera;
+    fuente;
+}
+exports.IntercambioAlimentoDto = IntercambioAlimentoDto;
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(1),
+    __metadata("design:type", String)
+], IntercambioAlimentoDto.prototype, "codigo", void 0);
+__decorate([
+    (0, class_validator_1.IsInt)(),
+    (0, class_validator_1.Min)(1),
+    __metadata("design:type", Number)
+], IntercambioAlimentoDto.prototype, "categoria_id", void 0);
+__decorate([
+    (0, class_validator_1.IsInt)(),
+    (0, class_validator_1.Min)(1),
+    __metadata("design:type", Number)
+], IntercambioAlimentoDto.prototype, "subcategoria_id", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(2),
+    __metadata("design:type", String)
+], IntercambioAlimentoDto.prototype, "nombre", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], IntercambioAlimentoDto.prototype, "peso_gramos", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(1),
+    __metadata("design:type", String)
+], IntercambioAlimentoDto.prototype, "medida_casera", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], IntercambioAlimentoDto.prototype, "fuente", void 0);
+class DosificacionPreparacionDto {
+    alimento_id;
+    preparacion;
+    peso_bruto_kg;
+    peso_neto_kg;
+    energia_kcal;
+    proteina_g;
+    grasa_g;
+    carbohidrato_g;
+    hierro_mg;
+    retinol_ug;
+    porcion_comestible_pct;
+    fuente;
+}
+exports.DosificacionPreparacionDto = DosificacionPreparacionDto;
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(1),
+    __metadata("design:type", String)
+], DosificacionPreparacionDto.prototype, "alimento_id", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(2),
+    __metadata("design:type", String)
+], DosificacionPreparacionDto.prototype, "preparacion", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], DosificacionPreparacionDto.prototype, "peso_bruto_kg", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], DosificacionPreparacionDto.prototype, "peso_neto_kg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], DosificacionPreparacionDto.prototype, "energia_kcal", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], DosificacionPreparacionDto.prototype, "proteina_g", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], DosificacionPreparacionDto.prototype, "grasa_g", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], DosificacionPreparacionDto.prototype, "carbohidrato_g", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], DosificacionPreparacionDto.prototype, "hierro_mg", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], DosificacionPreparacionDto.prototype, "retinol_ug", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], DosificacionPreparacionDto.prototype, "porcion_comestible_pct", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], DosificacionPreparacionDto.prototype, "fuente", void 0);
 class FoodSubstitutionDto {
     foodId;
     substituteFoodId;

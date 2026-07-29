@@ -70,6 +70,84 @@ let ClinicalService = class ClinicalService {
     createFood(d) { return this.prisma.food.create({ data: d }); }
     updateFood(id, d) { return this.prisma.food.update({ where: { id }, data: d }); }
     deleteFood(id) { return this.prisma.food.delete({ where: { id } }); }
+    async tablasPeruanasAlimentos(page, limit, search) {
+        const where = search ? { OR: [
+                { codigo: { contains: search } },
+                { nombre: { contains: search } },
+                { categoria: { nombre: { contains: search } } },
+            ] } : undefined;
+        const [data, total] = await this.prisma.$transaction([
+            this.prisma.tablaperuanaalimento.findMany({ where, include: { categoria: true }, orderBy: [{ estado: 'desc' }, { categoria_codigo: 'asc' }, { nombre: 'asc' }], skip: (page - 1) * limit, take: limit }),
+            this.prisma.tablaperuanaalimento.count({ where }),
+        ]);
+        return { data, meta: { page, limit, total, totalPages: Math.max(1, Math.ceil(total / limit)) } };
+    }
+    categoriasTablasPeruanas() { return this.prisma.tablaperuanacategoria.findMany({ where: { estado: 1 }, orderBy: { codigo: 'asc' } }); }
+    tablaPeruanaAlimento(id) { return this.prisma.tablaperuanaalimento.findUniqueOrThrow({ where: { id } }); }
+    createTablaPeruanaAlimento(d) { return this.prisma.tablaperuanaalimento.create({ data: { ...d, codigo: d.codigo.trim().toUpperCase(), estado: 1 } }); }
+    updateTablaPeruanaAlimento(id, d) { return this.prisma.tablaperuanaalimento.update({ where: { id }, data: { ...d, codigo: d.codigo.trim().toUpperCase() } }); }
+    disableTablaPeruanaAlimento(id) { return this.prisma.tablaperuanaalimento.update({ where: { id }, data: { estado: 0 } }); }
+    async intercambiosAlimentos(page, limit, search) {
+        const where = search ? { OR: [
+                { codigo: { contains: search } },
+                { nombre: { contains: search } },
+                { medida_casera: { contains: search } },
+                { categoria: { nombre: { contains: search } } },
+                { subcategoria: { nombre: { contains: search } } },
+            ] } : undefined;
+        const [data, total] = await this.prisma.$transaction([
+            this.prisma.intercambioalimento.findMany({ where, include: { categoria: true, subcategoria: true }, orderBy: [{ estado: 'desc' }, { categoria_id: 'asc' }, { nombre: 'asc' }], skip: (page - 1) * limit, take: limit }),
+            this.prisma.intercambioalimento.count({ where }),
+        ]);
+        return { data, meta: { page, limit, total, totalPages: Math.max(1, Math.ceil(total / limit)) } };
+    }
+    categoriasIntercambio() { return this.prisma.intercambiocategoria.findMany({ where: { estado: 1 }, include: { subcategorias: { where: { estado: 1 }, orderBy: { id: 'asc' } } }, orderBy: { id: 'asc' } }); }
+    intercambioAlimento(id) { return this.prisma.intercambioalimento.findUniqueOrThrow({ where: { id }, include: { categoria: true, subcategoria: true } }); }
+    async validateIntercambioCategory(d) {
+        const subcategoria = await this.prisma.intercambiosubcategoria.findFirst({ where: { id: d.subcategoria_id, categoria_id: d.categoria_id, estado: 1 } });
+        if (!subcategoria)
+            throw new common_1.BadRequestException('La lista nutricional no corresponde al grupo seleccionado.');
+    }
+    async createIntercambioAlimento(d) {
+        await this.validateIntercambioCategory(d);
+        return this.prisma.intercambioalimento.create({ data: { ...d, codigo: d.codigo.trim().toUpperCase(), estado: 1 } });
+    }
+    async updateIntercambioAlimento(id, d) {
+        await this.validateIntercambioCategory(d);
+        return this.prisma.intercambioalimento.update({ where: { id }, data: { ...d, codigo: d.codigo.trim().toUpperCase() } });
+    }
+    disableIntercambioAlimento(id) { return this.prisma.intercambioalimento.update({ where: { id }, data: { estado: 0 } }); }
+    async dosificacionesAlimentos(page, limit, search) {
+        const where = search ? { OR: [
+                { preparacion: { contains: search } },
+                { alimento: { codigo: { contains: search } } },
+                { alimento: { nombre: { contains: search } } },
+                { alimento: { categoria: { nombre: { contains: search } } } },
+            ] } : undefined;
+        const [data, total] = await this.prisma.$transaction([
+            this.prisma.dosificacionpreparacion.findMany({ where, include: { alimento: { include: { categoria: true } } }, orderBy: [{ estado: 'desc' }, { alimento: { orden: 'asc' } }, { preparacion: 'asc' }], skip: (page - 1) * limit, take: limit }),
+            this.prisma.dosificacionpreparacion.count({ where }),
+        ]);
+        return { data, meta: { page, limit, total, totalPages: Math.max(1, Math.ceil(total / limit)) } };
+    }
+    alimentosDosificacion() { return this.prisma.dosificacionalimento.findMany({ where: { estado: 1 }, include: { categoria: true }, orderBy: { orden: 'asc' } }); }
+    dosificacionAlimento(id) { return this.prisma.dosificacionpreparacion.findUniqueOrThrow({ where: { id }, include: { alimento: { include: { categoria: true } } } }); }
+    async validateDosificacion(d) {
+        if (d.peso_neto_kg > d.peso_bruto_kg)
+            throw new common_1.BadRequestException('El peso neto no puede superar el peso bruto.');
+        const alimento = await this.prisma.dosificacionalimento.findFirst({ where: { id: d.alimento_id, estado: 1 } });
+        if (!alimento)
+            throw new common_1.BadRequestException('El alimento seleccionado no está disponible.');
+    }
+    async createDosificacionAlimento(d) {
+        await this.validateDosificacion(d);
+        return this.prisma.dosificacionpreparacion.create({ data: { ...d, estado: 1 } });
+    }
+    async updateDosificacionAlimento(id, d) {
+        await this.validateDosificacion(d);
+        return this.prisma.dosificacionpreparacion.update({ where: { id }, data: d });
+    }
+    disableDosificacionAlimento(id) { return this.prisma.dosificacionpreparacion.update({ where: { id }, data: { estado: 0 } }); }
     substitutions() { return this.prisma.foodSubstitution.findMany({ include: { food: true, substituteFood: true } }); }
     createSubstitution(d) { return this.prisma.foodSubstitution.create({ data: d }); }
     deleteSubstitution(id) { return this.prisma.foodSubstitution.delete({ where: { id } }); }
