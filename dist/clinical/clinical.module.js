@@ -11,10 +11,13 @@ const common_1 = require("@nestjs/common");
 const permissions_guard_1 = require("../auth/permissions.guard");
 const clinical_controller_1 = require("./clinical.controller");
 const clinical_service_1 = require("./clinical.service");
+const tablas_peruanas_alimentos_controller_1 = require("./tablas-peruanas-alimentos.controller");
+const intercambios_alimentos_controller_1 = require("./intercambios-alimentos.controller");
+const dosificacion_alimentos_controller_1 = require("./dosificacion-alimentos.controller");
 let ClinicalModule = class ClinicalModule {
 };
 exports.ClinicalModule = ClinicalModule;
 exports.ClinicalModule = ClinicalModule = __decorate([
-    (0, common_1.Module)({ controllers: [clinical_controller_1.ClinicalController], providers: [clinical_service_1.ClinicalService, permissions_guard_1.PermissionsGuard] })
+    (0, common_1.Module)({ controllers: [clinical_controller_1.ClinicalController, tablas_peruanas_alimentos_controller_1.TablasPeruanasAlimentosController, intercambios_alimentos_controller_1.IntercambiosAlimentosController, dosificacion_alimentos_controller_1.DosificacionAlimentosController], providers: [clinical_service_1.ClinicalService, permissions_guard_1.PermissionsGuard] })
 ], ClinicalModule);
 //# sourceMappingURL=clinical.module.js.map

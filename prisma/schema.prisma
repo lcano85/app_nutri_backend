@@ -238,6 +238,174 @@ model Food {
   @@map("food")
 }
 
+model tablaperuanaalimento {
+  id                      String                @id @default(uuid())
+  codigo                  String                @unique
+  codigo_grupo            String
+  codigo_numero           Int
+  categoria_codigo        String
+  nombre                  String
+  grupo                   String?
+  estrato                 String?
+  energia_kcal            Decimal?              @db.Decimal(10, 2)
+  energia_kj              Decimal?              @db.Decimal(10, 2)
+  agua_g                  Decimal?              @db.Decimal(10, 2)
+  proteina_g              Decimal?              @db.Decimal(10, 2)
+  grasa_total_g           Decimal?              @db.Decimal(10, 2)
+  carbohidratos_totales_g Decimal?              @db.Decimal(10, 2)
+  carbohidratos_disp_g    Decimal?              @db.Decimal(10, 2)
+  fibra_dietaria_g        Decimal?              @db.Decimal(10, 2)
+  cenizas_g               Decimal?              @db.Decimal(10, 2)
+  calcio_mg               Decimal?              @db.Decimal(10, 2)
+  fosforo_mg              Decimal?              @db.Decimal(10, 2)
+  zinc_mg                 Decimal?              @db.Decimal(10, 2)
+  hierro_mg               Decimal?              @db.Decimal(10, 2)
+  sodio_mg                Decimal?              @db.Decimal(10, 2)
+  potasio_mg              Decimal?              @db.Decimal(10, 2)
+  betacaroteno_ug         Decimal?              @db.Decimal(12, 2)
+  vitamina_a_ug           Decimal?              @db.Decimal(12, 2)
+  tiamina_mg              Decimal?              @db.Decimal(10, 2)
+  riboflavina_mg          Decimal?              @db.Decimal(10, 2)
+  niacina_mg              Decimal?              @db.Decimal(10, 2)
+  vitamina_c_mg           Decimal?              @db.Decimal(10, 2)
+  acido_folico_ug         Decimal?              @db.Decimal(10, 2)
+  fuente                  String                @default("Tablas Peruanas de Composición de Alimentos, 11.ª edición digital, marzo de 2025")
+  origen                  String                @default("ins_tpca_11_2023")
+  estado                  Int                   @default(1) @db.TinyInt
+  creado_en               DateTime              @default(now())
+  actualizado_en          DateTime              @updatedAt
+  categoria               tablaperuanacategoria @relation(fields: [categoria_codigo], references: [codigo])
+
+  @@index([nombre])
+  @@index([grupo])
+  @@index([codigo_grupo, codigo_numero])
+  @@index([categoria_codigo])
+  @@index([estado])
+  @@index([estado, grupo, nombre])
+  @@map("tablaperuanaalimento")
+}
+
+model tablaperuanacategoria {
+  codigo         String                 @id
+  nombre         String
+  estado         Int                    @default(1) @db.TinyInt
+  creado_en      DateTime               @default(now())
+  actualizado_en DateTime               @updatedAt
+  alimentos      tablaperuanaalimento[]
+
+  @@index([estado, nombre])
+  @@map("tablaperuanacategoria")
+}
+
+model intercambiocategoria {
+  id              Int                       @id
+  codigo          String                    @unique
+  nombre          String
+  estado          Int                       @default(1) @db.TinyInt
+  creado_en       DateTime                  @default(now())
+  actualizado_en  DateTime                  @updatedAt
+  subcategorias   intercambiosubcategoria[]
+  alimentos       intercambioalimento[]
+
+  @@index([estado, nombre])
+  @@map("intercambiocategoria")
+}
+
+model intercambiosubcategoria {
+  id               Int                    @id @default(autoincrement())
+  categoria_id     Int
+  codigo           String                 @unique
+  nombre           String
+  energia_kcal     Decimal                @db.Decimal(8, 2)
+  proteina_g       Decimal                @db.Decimal(8, 2)
+  lipidos_g        Decimal                @db.Decimal(8, 2)
+  carbohidratos_g  Decimal                @db.Decimal(8, 2)
+  estado           Int                    @default(1) @db.TinyInt
+  creado_en        DateTime               @default(now())
+  actualizado_en   DateTime               @updatedAt
+  categoria        intercambiocategoria   @relation(fields: [categoria_id], references: [id])
+  alimentos        intercambioalimento[]
+
+  @@index([categoria_id, estado, nombre])
+  @@map("intercambiosubcategoria")
+}
+
+model intercambioalimento {
+  id                String                   @id @default(uuid())
+  codigo            String                   @unique
+  categoria_id      Int
+  subcategoria_id   Int
+  nombre            String
+  peso_gramos       Decimal                  @db.Decimal(8, 2)
+  medida_casera     String
+  fuente            String                   @default("Guía de intercambio de alimentos — INS/CENAN/MINSA, primera edición, noviembre de 2014")
+  estado            Int                      @default(1) @db.TinyInt
+  creado_en         DateTime                 @default(now())
+  actualizado_en    DateTime                 @updatedAt
+  categoria         intercambiocategoria     @relation(fields: [categoria_id], references: [id])
+  subcategoria      intercambiosubcategoria  @relation(fields: [subcategoria_id], references: [id])
+
+  @@index([nombre])
+  @@index([categoria_id, subcategoria_id, estado])
+  @@index([estado, nombre])
+  @@map("intercambioalimento")
+}
+
+model dosificacioncategoria {
+  id             Int                    @id
+  codigo         String                 @unique
+  nombre         String
+  estado         Int                    @default(1) @db.TinyInt
+  creado_en      DateTime               @default(now())
+  actualizado_en DateTime               @updatedAt
+  alimentos      dosificacionalimento[]
+
+  @@index([estado, nombre])
+  @@map("dosificacioncategoria")
+}
+
+model dosificacionalimento {
+  id             String                  @id @default(uuid())
+  codigo         String                  @unique
+  orden          Int                     @unique
+  categoria_id   Int
+  nombre         String
+  estado         Int                     @default(1) @db.TinyInt
+  creado_en      DateTime                @default(now())
+  actualizado_en DateTime                @updatedAt
+  categoria      dosificacioncategoria   @relation(fields: [categoria_id], references: [id])
+  dosificaciones dosificacionpreparacion[]
+
+  @@index([categoria_id, estado, nombre])
+  @@index([nombre])
+  @@map("dosificacionalimento")
+}
+
+model dosificacionpreparacion {
+  id                     String                @id @default(uuid())
+  alimento_id            String
+  preparacion            String
+  peso_bruto_kg          Decimal               @db.Decimal(10, 2)
+  peso_neto_kg           Decimal               @db.Decimal(10, 2)
+  energia_kcal           Decimal?              @db.Decimal(10, 2)
+  proteina_g             Decimal?              @db.Decimal(10, 2)
+  grasa_g                Decimal?              @db.Decimal(10, 2)
+  carbohidrato_g         Decimal?              @db.Decimal(10, 2)
+  hierro_mg              Decimal?              @db.Decimal(10, 2)
+  retinol_ug             Decimal?              @db.Decimal(12, 2)
+  porcion_comestible_pct Decimal?              @db.Decimal(6, 2)
+  fuente                 String                @default("Tabla de dosificación de alimentos para servicios de alimentación colectiva — MINSA/INS/CENAN, 2005")
+  estado                 Int                   @default(1) @db.TinyInt
+  creado_en              DateTime              @default(now())
+  actualizado_en         DateTime              @updatedAt
+  alimento               dosificacionalimento  @relation(fields: [alimento_id], references: [id])
+
+  @@index([alimento_id, estado])
+  @@index([preparacion])
+  @@index([estado, alimento_id])
+  @@map("dosificacionpreparacion")
+}
+
 model FoodSubstitution {
   id                      String  @id @default(uuid())
   foodId                  String

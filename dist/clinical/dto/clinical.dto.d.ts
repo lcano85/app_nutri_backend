@@ -79,6 +79,61 @@ export declare class FoodDto {
     fiberGrams?: number;
     sodiumMg?: number;
 }
+export declare class TablaPeruanaAlimentoDto {
+    codigo: string;
+    codigo_grupo: string;
+    codigo_numero: number;
+    categoria_codigo: string;
+    nombre: string;
+    grupo?: string;
+    estrato?: string;
+    energia_kcal?: number;
+    energia_kj?: number;
+    agua_g?: number;
+    proteina_g?: number;
+    grasa_total_g?: number;
+    carbohidratos_totales_g?: number;
+    carbohidratos_disp_g?: number;
+    fibra_dietaria_g?: number;
+    cenizas_g?: number;
+    calcio_mg?: number;
+    fosforo_mg?: number;
+    hierro_mg?: number;
+    zinc_mg?: number;
+    sodio_mg?: number;
+    potasio_mg?: number;
+    betacaroteno_ug?: number;
+    vitamina_a_ug?: number;
+    tiamina_mg?: number;
+    riboflavina_mg?: number;
+    niacina_mg?: number;
+    vitamina_c_mg?: number;
+    acido_folico_ug?: number;
+    fuente?: string;
+}
+export declare class IntercambioAlimentoDto {
+    codigo: string;
+    categoria_id: number;
+    subcategoria_id: number;
+    nombre: string;
+    peso_gramos: number;
+    medida_casera: string;
+    fuente?: string;
+}
+export declare class DosificacionPreparacionDto {
+    alimento_id: string;
+    preparacion: string;
+    peso_bruto_kg: number;
+    peso_neto_kg: number;
+    energia_kcal?: number;
+    proteina_g?: number;
+    grasa_g?: number;
+    carbohidrato_g?: number;
+    hierro_mg?: number;
+    retinol_ug?: number;
+    porcion_comestible_pct?: number;
+    fuente?: string;
+}
 export declare class FoodSubstitutionDto {
     foodId: string;
     substituteFoodId: string;

@@ -1,0 +1,4291 @@
+{
+  "fuente": "Tabla de dosificación de alimentos para servicios de alimentación colectiva — MINSA/INS/CENAN, 2005",
+  "categories": [
+    {
+      "id": 1,
+      "codigo": "LECHES",
+      "nombre": "Leches y sus derivados"
+    },
+    {
+      "id": 2,
+      "codigo": "HUEVOS",
+      "nombre": "Huevos"
+    },
+    {
+      "id": 3,
+      "codigo": "CARNES",
+      "nombre": "Carnes y preparados"
+    },
+    {
+      "id": 4,
+      "codigo": "PESCADOS",
+      "nombre": "Pescados"
+    },
+    {
+      "id": 5,
+      "codigo": "CRUSTACEOS_MOLUSCOS",
+      "nombre": "Crustáceos y moluscos"
+    },
+    {
+      "id": 6,
+      "codigo": "CEREALES",
+      "nombre": "Cereales, granos y derivados"
+    },
+    {
+      "id": 7,
+      "codigo": "LEGUMINOSAS",
+      "nombre": "Leguminosas y derivados"
+    },
+    {
+      "id": 8,
+      "codigo": "OLEAGINOSAS",
+      "nombre": "Oleaginosas y derivados"
+    },
+    {
+      "id": 9,
+      "codigo": "VERDURAS",
+      "nombre": "Verduras y preparados"
+    },
+    {
+      "id": 10,
+      "codigo": "TUBERCULOS",
+      "nombre": "Tubérculos, raíces y preparados"
+    },
+    {
+      "id": 11,
+      "codigo": "FRUTAS",
+      "nombre": "Frutas y preparados"
+    },
+    {
+      "id": 12,
+      "codigo": "AZUCARES",
+      "nombre": "Azúcares y productos dulces"
+    }
+  ],
+  "foods": [
+    {
+      "orden": 1,
+      "codigo": "DA001",
+      "categoria_id": 1,
+      "nombre": "LECHE FLUIDA DE VACA",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas o ají de gallina",
+          "peso_bruto_kg": 5,
+          "peso_neto_kg": 5,
+          "energia_kcal": 32,
+          "proteina_g": 1.6,
+          "grasa_g": 1.8,
+          "carbohidrato_g": 2.4,
+          "hierro_mg": 0.7,
+          "retinol_ug": 14,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en purés o postres",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 38,
+          "proteina_g": 1.9,
+          "grasa_g": 2.1,
+          "carbohidrato_g": 2.9,
+          "hierro_mg": 0.8,
+          "retinol_ug": 17,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en el desayuno",
+          "peso_bruto_kg": 5,
+          "peso_neto_kg": 5,
+          "energia_kcal": 32,
+          "proteina_g": 1.6,
+          "grasa_g": 1.8,
+          "carbohidrato_g": 2.4,
+          "hierro_mg": 0.7,
+          "retinol_ug": 14,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en soufle",
+          "peso_bruto_kg": 25,
+          "peso_neto_kg": 25,
+          "energia_kcal": 158,
+          "proteina_g": 7.8,
+          "grasa_g": 8.8,
+          "carbohidrato_g": 12,
+          "hierro_mg": 3.3,
+          "retinol_ug": 70,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 2,
+      "codigo": "DA002",
+      "categoria_id": 1,
+      "nombre": "LECHE EN POLVO ENTERA INSTANTÁNEA (1 sobre 120 g)",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas (5 sobres)",
+          "peso_bruto_kg": 0.6,
+          "peso_neto_kg": 0.6,
+          "energia_kcal": 29,
+          "proteina_g": 1.6,
+          "grasa_g": 1.6,
+          "carbohidrato_g": 2.2,
+          "hierro_mg": 0,
+          "retinol_ug": 12,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en purés o postres (10 sobres)",
+          "peso_bruto_kg": 1.2,
+          "peso_neto_kg": 1.2,
+          "energia_kcal": 58,
+          "proteina_g": 3.2,
+          "grasa_g": 3.1,
+          "carbohidrato_g": 4.3,
+          "hierro_mg": 0,
+          "retinol_ug": 24,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en el desayuno (25 sobres)",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 3,
+          "energia_kcal": 145,
+          "proteina_g": 8.1,
+          "grasa_g": 7.8,
+          "carbohidrato_g": 10.8,
+          "hierro_mg": 0.1,
+          "retinol_ug": 61,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 3,
+      "codigo": "DA003",
+      "categoria_id": 1,
+      "nombre": "LECHE EVAPORADA (1 lata 410 g )",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas o ají de gallina, soufflé (6 latas)",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.5,
+          "energia_kcal": 35,
+          "proteina_g": 1.7,
+          "grasa_g": 2,
+          "carbohidrato_g": 2.7,
+          "hierro_mg": null,
+          "retinol_ug": 13,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en purés o postres (5 latas y 1/4)",
+          "peso_bruto_kg": 2.2,
+          "peso_neto_kg": 2.2,
+          "energia_kcal": 31,
+          "proteina_g": 1.5,
+          "grasa_g": 1.7,
+          "carbohidrato_g": 2.3,
+          "hierro_mg": null,
+          "retinol_ug": 11,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en preparación de papa a la huancaína (4 latas)",
+          "peso_bruto_kg": 1.6,
+          "peso_neto_kg": 1.6,
+          "energia_kcal": 23,
+          "proteina_g": 1.1,
+          "grasa_g": 1.3,
+          "carbohidrato_g": 1.8,
+          "hierro_mg": null,
+          "retinol_ug": 9,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en el desayuno (30 latas y 1/2)",
+          "peso_bruto_kg": 12.5,
+          "peso_neto_kg": 12.5,
+          "energia_kcal": 179,
+          "proteina_g": 8.8,
+          "grasa_g": 10.1,
+          "carbohidrato_g": 13.6,
+          "hierro_mg": null,
+          "retinol_ug": 65,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 4,
+      "codigo": "DA004",
+      "categoria_id": 1,
+      "nombre": "QUESO FRESCO DE VACA",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 1,
+          "peso_neto_kg": 1,
+          "energia_kcal": 23,
+          "proteina_g": 1.6,
+          "grasa_g": 1.8,
+          "carbohidrato_g": 0.2,
+          "hierro_mg": 0.2,
+          "retinol_ug": 8,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 46,
+          "proteina_g": 3.2,
+          "grasa_g": 3.5,
+          "carbohidrato_g": 0.4,
+          "hierro_mg": 0.4,
+          "retinol_ug": 16,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en sandwichs",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 3,
+          "energia_kcal": 69,
+          "proteina_g": 4.7,
+          "grasa_g": 5.3,
+          "carbohidrato_g": 0.7,
+          "hierro_mg": 0.6,
+          "retinol_ug": 23,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en salsa (al pesto)",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.5,
+          "energia_kcal": 35,
+          "proteina_g": 2.4,
+          "grasa_g": 2.6,
+          "carbohidrato_g": 0.3,
+          "hierro_mg": 0.3,
+          "retinol_ug": 12,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en salsa para papa huancaina, pasteles, etc.",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.5,
+          "energia_kcal": 58,
+          "proteina_g": 4,
+          "grasa_g": 4.4,
+          "carbohidrato_g": 0.6,
+          "hierro_mg": 0.5,
+          "retinol_ug": 20,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 5,
+      "codigo": "DA005",
+      "categoria_id": 2,
+      "nombre": "HUEVO DE GALLINA (de 50 a 55 g unidad mediana)",
+      "dosificaciones": [
+        {
+          "preparacion": "en arroz chaufa (37 unidades medianas)",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1.8,
+          "energia_kcal": 25,
+          "proteina_g": 2.4,
+          "grasa_g": 1.5,
+          "carbohidrato_g": 0.3,
+          "hierro_mg": 0.2,
+          "retinol_ug": 18,
+          "porcion_comestible_pct": 87
+        },
+        {
+          "preparacion": "en pastel, soufflé (60 unidades medianas)",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 2.6,
+          "energia_kcal": 37,
+          "proteina_g": 3.6,
+          "grasa_g": 2.2,
+          "carbohidrato_g": 0.5,
+          "hierro_mg": 0.3,
+          "retinol_ug": 26,
+          "porcion_comestible_pct": 88
+        },
+        {
+          "preparacion": "en sopas, tortilla o en adornos (25 unidades grandes)",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.3,
+          "energia_kcal": 18,
+          "proteina_g": 1.8,
+          "grasa_g": 1.1,
+          "carbohidrato_g": 0.2,
+          "hierro_mg": 0.1,
+          "retinol_ug": 13,
+          "porcion_comestible_pct": 87
+        },
+        {
+          "preparacion": "frito o sancochado (100 unidades grandes)",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 5.3,
+          "energia_kcal": 74,
+          "proteina_g": 7.1,
+          "grasa_g": 4.4,
+          "carbohidrato_g": 1,
+          "hierro_mg": 0.6,
+          "retinol_ug": 53,
+          "porcion_comestible_pct": 88
+        },
+        {
+          "preparacion": "en mayonesa, relleno, fricas, arrebozado (13 unidades grandes)",
+          "peso_bruto_kg": 0.8,
+          "peso_neto_kg": 0.7,
+          "energia_kcal": 9,
+          "proteina_g": 0.9,
+          "grasa_g": 0.6,
+          "carbohidrato_g": 0.1,
+          "hierro_mg": 0.1,
+          "retinol_ug": 7,
+          "porcion_comestible_pct": 86
+        }
+      ]
+    },
+    {
+      "orden": 6,
+      "codigo": "DA006",
+      "categoria_id": 3,
+      "nombre": "CARNERO PULPA CON HUESO",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 12,
+          "peso_neto_kg": 9,
+          "energia_kcal": 153,
+          "proteina_g": 15.3,
+          "grasa_g": 17.1,
+          "carbohidrato_g": 0,
+          "hierro_mg": 2.2,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 75
+        }
+      ]
+    },
+    {
+      "orden": 7,
+      "codigo": "DA007",
+      "categoria_id": 3,
+      "nombre": "POLLO ENTERO CON MENUDENCIA (de 1,6 kg a 1,8 kg)",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos o arroz con pollo, en saltado o chaufa",
+          "peso_bruto_kg": 16,
+          "peso_neto_kg": 11.7,
+          "energia_kcal": 199,
+          "proteina_g": 21.3,
+          "grasa_g": 11.9,
+          "carbohidrato_g": 0,
+          "hierro_mg": 1.8,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 73
+        },
+        {
+          "preparacion": "en ají de gallina (pechuga 115 g. unidad pequeña) 100 unidades",
+          "peso_bruto_kg": 11.5,
+          "peso_neto_kg": 10.1,
+          "energia_kcal": 172,
+          "proteina_g": 18.4,
+          "grasa_g": 10.3,
+          "carbohidrato_g": 0,
+          "hierro_mg": 1.5,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 88
+        },
+        {
+          "preparacion": "Preparación 3",
+          "peso_bruto_kg": 4,
+          "peso_neto_kg": 3.8,
+          "energia_kcal": 62,
+          "proteina_g": 6.8,
+          "grasa_g": 2.8,
+          "carbohidrato_g": 1.9,
+          "hierro_mg": 2.2,
+          "retinol_ug": 3.876,
+          "porcion_comestible_pct": 95
+        }
+      ]
+    },
+    {
+      "orden": 8,
+      "codigo": "DA008",
+      "categoria_id": 3,
+      "nombre": "HÍGADO DE POLLO",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopa ,aguadito",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 9.6,
+          "energia_kcal": 156,
+          "proteina_g": 17.2,
+          "grasa_g": 7,
+          "carbohidrato_g": 4.8,
+          "hierro_mg": 5.5,
+          "retinol_ug": 9.792,
+          "porcion_comestible_pct": 96
+        },
+        {
+          "preparacion": "en guisos o en saltado",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 2.7,
+          "energia_kcal": 27,
+          "proteina_g": 4.9,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 0.7,
+          "hierro_mg": 1.2,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 92
+        }
+      ]
+    },
+    {
+      "orden": 9,
+      "codigo": "DA009",
+      "categoria_id": 3,
+      "nombre": "MOLLEJA DE POLLO",
+      "dosificaciones": [
+        {
+          "preparacion": "sopa, aguadito",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 9.7,
+          "energia_kcal": 96,
+          "proteina_g": 17.6,
+          "grasa_g": 1.2,
+          "carbohidrato_g": 2.6,
+          "hierro_mg": 4.4,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 97
+        }
+      ]
+    },
+    {
+      "orden": 10,
+      "codigo": "DA010",
+      "categoria_id": 3,
+      "nombre": "SANGRECITA DE POLLO",
+      "dosificaciones": [
+        {
+          "preparacion": "en saltados o guisos",
+          "peso_bruto_kg": 13,
+          "peso_neto_kg": 13,
+          "energia_kcal": 84,
+          "proteina_g": 19.5,
+          "grasa_g": 0.1,
+          "carbohidrato_g": null,
+          "hierro_mg": 3.5,
+          "retinol_ug": 11,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "Preparación 2",
+          "peso_bruto_kg": 3.5,
+          "peso_neto_kg": 2.3,
+          "energia_kcal": 24,
+          "proteina_g": 4.9,
+          "grasa_g": 0.4,
+          "carbohidrato_g": null,
+          "hierro_mg": 0.8,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 66
+        }
+      ]
+    },
+    {
+      "orden": 11,
+      "codigo": "DA011",
+      "categoria_id": 3,
+      "nombre": "CARNE DE RES",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas (con hueso)",
+          "peso_bruto_kg": 15,
+          "peso_neto_kg": 9.9,
+          "energia_kcal": 104,
+          "proteina_g": 21.1,
+          "grasa_g": 1.6,
+          "carbohidrato_g": null,
+          "hierro_mg": 3.4,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 66
+        },
+        {
+          "preparacion": "en bistec, asado o saltado (pulpa)",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 10,
+          "energia_kcal": 105,
+          "proteina_g": 21.3,
+          "grasa_g": 1.6,
+          "carbohidrato_g": null,
+          "hierro_mg": 3.4,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 12,
+      "codigo": "DA012",
+      "categoria_id": 3,
+      "nombre": "CARNE MOLIDA",
+      "dosificaciones": [
+        {
+          "preparacion": "en caigua rellena",
+          "peso_bruto_kg": 3.5,
+          "peso_neto_kg": 3.5,
+          "energia_kcal": 37,
+          "proteina_g": 7.5,
+          "grasa_g": 0.6,
+          "carbohidrato_g": null,
+          "hierro_mg": 1.2,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en hamburguesa, albóndigas",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 63,
+          "proteina_g": 12.8,
+          "grasa_g": 1,
+          "carbohidrato_g": null,
+          "hierro_mg": 2,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.5,
+          "energia_kcal": 26,
+          "proteina_g": 5.3,
+          "grasa_g": 0.4,
+          "carbohidrato_g": null,
+          "hierro_mg": 0.9,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en papa rellena",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.5,
+          "energia_kcal": 16,
+          "proteina_g": 3.2,
+          "grasa_g": 0.2,
+          "carbohidrato_g": null,
+          "hierro_mg": 0.5,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 13,
+      "codigo": "DA013",
+      "categoria_id": 3,
+      "nombre": "MONDONGO (PICADO)",
+      "dosificaciones": [
+        {
+          "preparacion": "para guiso, cau cau",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 10,
+          "energia_kcal": 104,
+          "proteina_g": 16.9,
+          "grasa_g": 3.5,
+          "carbohidrato_g": null,
+          "hierro_mg": 0.8,
+          "retinol_ug": 65,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 14,
+      "codigo": "DA014",
+      "categoria_id": 3,
+      "nombre": "PULMÓN, BOFE",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 10,
+          "energia_kcal": 83,
+          "proteina_g": 17.2,
+          "grasa_g": 1.1,
+          "carbohidrato_g": null,
+          "hierro_mg": 6.5,
+          "retinol_ug": 51,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 15,
+      "codigo": "DA015",
+      "categoria_id": 3,
+      "nombre": "HÍGADO",
+      "dosificaciones": [
+        {
+          "preparacion": "en saltado o para fritura",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 10,
+          "energia_kcal": 127,
+          "proteina_g": 20,
+          "grasa_g": 4.6,
+          "carbohidrato_g": null,
+          "hierro_mg": 5.4,
+          "retinol_ug": 8082,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "Preparación 2",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 56,
+          "proteina_g": 11.5,
+          "grasa_g": 0.7,
+          "carbohidrato_g": null,
+          "hierro_mg": 1.3,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 16,
+      "codigo": "DA016",
+      "categoria_id": 3,
+      "nombre": "CHARQUI DE CARNE",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 56,
+          "proteina_g": 11.5,
+          "grasa_g": 0.7,
+          "carbohidrato_g": null,
+          "hierro_mg": 1.3,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 17,
+      "codigo": "DA017",
+      "categoria_id": 3,
+      "nombre": "CHALONA DE CARNERO",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 63,
+          "proteina_g": 10.1,
+          "grasa_g": 2.3,
+          "carbohidrato_g": null,
+          "hierro_mg": 0.8,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 18,
+      "codigo": "DA018",
+      "categoria_id": 4,
+      "nombre": "BONITO FRESCO ENTERO CON VÍSCERAS",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos, tallarín, frito o estofado",
+          "peso_bruto_kg": 16,
+          "peso_neto_kg": 10.4,
+          "energia_kcal": 144,
+          "proteina_g": 24.3,
+          "grasa_g": 4.4,
+          "carbohidrato_g": null,
+          "hierro_mg": 0.7,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 65
+        }
+      ]
+    },
+    {
+      "orden": 19,
+      "codigo": "DA019",
+      "categoria_id": 4,
+      "nombre": "BACALAO SECO",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos (pulpa)",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 225,
+          "proteina_g": 49.1,
+          "grasa_g": 1.7,
+          "carbohidrato_g": null,
+          "hierro_mg": 2.2,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 20,
+      "codigo": "DA020",
+      "categoria_id": 4,
+      "nombre": "SÓLIDO DE ATÚN Y FILETE (1 lata 185 g. Peso Neto)",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos o saltado (25 latas)",
+          "peso_bruto_kg": 4.6,
+          "peso_neto_kg": 4.6,
+          "energia_kcal": 133,
+          "proteina_g": 11.2,
+          "grasa_g": 9.5,
+          "carbohidrato_g": null,
+          "hierro_mg": 0.6,
+          "retinol_ug": 9,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en salpicón o causa (14 latas)",
+          "peso_bruto_kg": 2.6,
+          "peso_neto_kg": 2.6,
+          "energia_kcal": 75,
+          "proteina_g": 6.3,
+          "grasa_g": 5.3,
+          "carbohidrato_g": null,
+          "hierro_mg": 0.3,
+          "retinol_ug": 5,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 21,
+      "codigo": "DA021",
+      "categoria_id": 4,
+      "nombre": "SARDINA EN SALSA DE TOMATE (425 g. Peso Neto)",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos o saltado (14 latas)",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 105,
+          "proteina_g": 13.4,
+          "grasa_g": 5.4,
+          "carbohidrato_g": null,
+          "hierro_mg": 1,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "Preparación 2",
+          "peso_bruto_kg": 6.3,
+          "peso_neto_kg": 6.3,
+          "energia_kcal": 55,
+          "proteina_g": 9.8,
+          "grasa_g": 1.8,
+          "carbohidrato_g": null,
+          "hierro_mg": 2.5,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 22,
+      "codigo": "DA022",
+      "categoria_id": 5,
+      "nombre": "MACHAS FRESCAS",
+      "dosificaciones": [
+        {
+          "preparacion": "en ensaladas",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 3,
+          "energia_kcal": 26,
+          "proteina_g": 4.7,
+          "grasa_g": 0.8,
+          "carbohidrato_g": null,
+          "hierro_mg": 1.2,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 23,
+      "codigo": "DA023",
+      "categoria_id": 5,
+      "nombre": "CHOROS (72 g peso neto, 12 unidades medianas)",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas (16 docenas + 9 unidades)",
+          "peso_bruto_kg": 1.2,
+          "peso_neto_kg": 1.2,
+          "energia_kcal": 10,
+          "proteina_g": 1.6,
+          "grasa_g": 0.4,
+          "carbohidrato_g": null,
+          "hierro_mg": 0,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "Preparación 2",
+          "peso_bruto_kg": 7.2,
+          "peso_neto_kg": 7.2,
+          "energia_kcal": 63,
+          "proteina_g": 9.6,
+          "grasa_g": 2.4,
+          "carbohidrato_g": null,
+          "hierro_mg": 0.1,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "Preparación 3",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 72,
+          "proteina_g": 1.6,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 15.6,
+          "hierro_mg": 0.2,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 24,
+      "codigo": "DA024",
+      "categoria_id": 6,
+      "nombre": "ARROZ (PILADO)",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 3,
+          "energia_kcal": 108,
+          "proteina_g": 2.5,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 23.3,
+          "hierro_mg": 0.2,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 25,
+      "codigo": "DA025",
+      "categoria_id": 6,
+      "nombre": "AVENA",
+      "dosificaciones": [
+        {
+          "preparacion": "en el desayuno",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 69,
+          "proteina_g": 2.7,
+          "grasa_g": 0.8,
+          "carbohidrato_g": 14.4,
+          "hierro_mg": 0.8,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.5,
+          "energia_kcal": 52,
+          "proteina_g": 2,
+          "grasa_g": 0.6,
+          "carbohidrato_g": 10.8,
+          "hierro_mg": 0.6,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en postres",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.5,
+          "energia_kcal": 87,
+          "proteina_g": 3.3,
+          "grasa_g": 1,
+          "carbohidrato_g": 18,
+          "hierro_mg": 1,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 26,
+      "codigo": "DA026",
+      "categoria_id": 6,
+      "nombre": "FIDEOS",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas con verduras - fideos granel",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 72,
+          "proteina_g": 1.9,
+          "grasa_g": 0,
+          "carbohidrato_g": 15.6,
+          "hierro_mg": 0.2,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en sopas de fideo solo",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 3,
+          "energia_kcal": 108,
+          "proteina_g": 2.8,
+          "grasa_g": 6,
+          "carbohidrato_g": 23.5,
+          "hierro_mg": 0.3,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en fideos tallarín",
+          "peso_bruto_kg": 12.5,
+          "peso_neto_kg": 12.5,
+          "energia_kcal": 450,
+          "proteina_g": 11.8,
+          "grasa_g": 25,
+          "carbohidrato_g": 97.8,
+          "hierro_mg": 1.4,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "Preparación 4",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 3,
+          "energia_kcal": 101,
+          "proteina_g": 2.6,
+          "grasa_g": 0.5,
+          "carbohidrato_g": 22.1,
+          "hierro_mg": 1.4,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 27,
+      "codigo": "DA027",
+      "categoria_id": 6,
+      "nombre": "TRIGO PELADO",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos con arroz",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 202,
+          "proteina_g": 5.2,
+          "grasa_g": 0.9,
+          "carbohidrato_g": 44.2,
+          "hierro_mg": 2.8,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en guisos sin arroz",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 10,
+          "energia_kcal": 336,
+          "proteina_g": 8.6,
+          "grasa_g": 1.5,
+          "carbohidrato_g": 73.7,
+          "hierro_mg": 4.6,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 28,
+      "codigo": "DA028",
+      "categoria_id": 6,
+      "nombre": "HARINA DE TRIGO",
+      "dosificaciones": [
+        {
+          "preparacion": "para arrebosados",
+          "peso_bruto_kg": 1.2,
+          "peso_neto_kg": 1.2,
+          "energia_kcal": 43,
+          "proteina_g": 1.3,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 9,
+          "hierro_mg": null,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en torreja, soufflé",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 72,
+          "proteina_g": 2.1,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 15,
+          "hierro_mg": null,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en mazamorra, sopa crema",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.5,
+          "energia_kcal": 90,
+          "proteina_g": 2.6,
+          "grasa_g": 0.5,
+          "carbohidrato_g": 18.7,
+          "hierro_mg": null,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "para apanado",
+          "peso_bruto_kg": 0.6,
+          "peso_neto_kg": 0.6,
+          "energia_kcal": 22,
+          "proteina_g": 0.6,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 4.5,
+          "hierro_mg": null,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en papa rellena",
+          "peso_bruto_kg": 1,
+          "peso_neto_kg": 1,
+          "energia_kcal": 36,
+          "proteina_g": 1.1,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 7.5,
+          "hierro_mg": null,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "para espesar, compota, broaster",
+          "peso_bruto_kg": 0.4,
+          "peso_neto_kg": 0.4,
+          "energia_kcal": 14,
+          "proteina_g": 0.4,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 2.9,
+          "hierro_mg": null,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 29,
+      "codigo": "DA029",
+      "categoria_id": 6,
+      "nombre": "PAN DE LABRANZA (30 g cada unidad)",
+      "dosificaciones": [
+        {
+          "preparacion": "en ají de gallina (100 unidades)",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 0.1,
+          "energia_kcal": 3,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.7,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 3
+        },
+        {
+          "preparacion": "en croquetas, ocopa (pan rallado) (29 unidades)",
+          "peso_bruto_kg": 0.9,
+          "peso_neto_kg": 0.9,
+          "energia_kcal": 29,
+          "proteina_g": 0.8,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 6.2,
+          "hierro_mg": 0.1,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en salsa de maní, (pan rallado) (10 unidades)",
+          "peso_bruto_kg": 0.3,
+          "peso_neto_kg": 0.3,
+          "energia_kcal": 10,
+          "proteina_g": 0.3,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 2.2,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en desayuno (200 unidades)",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 201,
+          "proteina_g": 5.8,
+          "grasa_g": 1.8,
+          "carbohidrato_g": 43.1,
+          "hierro_mg": 1,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 30,
+      "codigo": "DA030",
+      "categoria_id": 6,
+      "nombre": "MAÍZ FRESCO Y CHOCLO (265 g cada uni. med. sin panca)",
+      "dosificaciones": [
+        {
+          "preparacion": "en ensaladas, en sopa o chupe (25 unidades medianas)",
+          "peso_bruto_kg": 6.5,
+          "peso_neto_kg": 4.2,
+          "energia_kcal": 54,
+          "proteina_g": 1.4,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 11.6,
+          "hierro_mg": 0.3,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 64
+        },
+        {
+          "preparacion": "en guiso y en pepian (49 unidades medianas)",
+          "peso_bruto_kg": 13,
+          "peso_neto_kg": 8.3,
+          "energia_kcal": 107,
+          "proteina_g": 2.7,
+          "grasa_g": 0.7,
+          "carbohidrato_g": 23.1,
+          "hierro_mg": 0.7,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 64
+        }
+      ]
+    },
+    {
+      "orden": 31,
+      "codigo": "DA031",
+      "categoria_id": 6,
+      "nombre": "MOTE PELADO",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.5,
+          "energia_kcal": 54,
+          "proteina_g": 0.9,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 11.7,
+          "hierro_mg": 0.6,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en champús",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 73,
+          "proteina_g": 1.2,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 15.7,
+          "hierro_mg": 0.8,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 216,
+          "proteina_g": 3.5,
+          "grasa_g": 1.2,
+          "carbohidrato_g": 46.6,
+          "hierro_mg": 2.3,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 32,
+      "codigo": "DA032",
+      "categoria_id": 6,
+      "nombre": "HARINA DE MAÍZ",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 76,
+          "proteina_g": 1.7,
+          "grasa_g": 1.3,
+          "carbohidrato_g": 14.2,
+          "hierro_mg": 0.4,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en guisos, postres",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.5,
+          "energia_kcal": 95,
+          "proteina_g": 2.2,
+          "grasa_g": 1.6,
+          "carbohidrato_g": 17.8,
+          "hierro_mg": 0.5,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 33,
+      "codigo": "DA033",
+      "categoria_id": 6,
+      "nombre": "SÉMOLA DE MAÍZ",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1.2,
+          "energia_kcal": 42,
+          "proteina_g": 1,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 8.9,
+          "hierro_mg": 0.2,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 60
+        },
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 3,
+          "energia_kcal": 104,
+          "proteina_g": 2.5,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 22.2,
+          "hierro_mg": 0.6,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en postre",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.5,
+          "energia_kcal": 87,
+          "proteina_g": 2.1,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 18.5,
+          "hierro_mg": 0.5,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 34,
+      "codigo": "DA034",
+      "categoria_id": 6,
+      "nombre": "MAIZENA",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 1.2,
+          "peso_neto_kg": 1.2,
+          "energia_kcal": 42,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 10.4,
+          "hierro_mg": null,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en postre",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.5,
+          "energia_kcal": 53,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 13,
+          "hierro_mg": null,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en compota",
+          "peso_bruto_kg": 0.5,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 18,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 4.3,
+          "hierro_mg": null,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 35,
+      "codigo": "DA035",
+      "categoria_id": 6,
+      "nombre": "POLENTA",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 69,
+          "proteina_g": 1.7,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 14.8,
+          "hierro_mg": 0.4,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 208,
+          "proteina_g": 5,
+          "grasa_g": 0.7,
+          "carbohidrato_g": 44.4,
+          "hierro_mg": 1.2,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 36,
+      "codigo": "DA036",
+      "categoria_id": 6,
+      "nombre": "QUINUA",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.5,
+          "energia_kcal": 56,
+          "proteina_g": 2,
+          "grasa_g": 0.9,
+          "carbohidrato_g": 9.9,
+          "hierro_mg": 1.1,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en chupes y postre",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 75,
+          "proteina_g": 2.7,
+          "grasa_g": 1.2,
+          "carbohidrato_g": 13.3,
+          "hierro_mg": 1.5,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en guisos sin arroz",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.5,
+          "energia_kcal": 94,
+          "proteina_g": 3.4,
+          "grasa_g": 1.5,
+          "carbohidrato_g": 16.6,
+          "hierro_mg": 1.9,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en guisos con arroz",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 224,
+          "proteina_g": 8.2,
+          "grasa_g": 3.5,
+          "carbohidrato_g": 39.8,
+          "hierro_mg": 4.5,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "Preparación 5",
+          "peso_bruto_kg": 3.1,
+          "peso_neto_kg": 1.3,
+          "energia_kcal": 14,
+          "proteina_g": 1,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 2.5,
+          "hierro_mg": 0.2,
+          "retinol_ug": 4,
+          "porcion_comestible_pct": 44
+        }
+      ]
+    },
+    {
+      "orden": 37,
+      "codigo": "DA037",
+      "categoria_id": 7,
+      "nombre": "ARVEJA FRESCA",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos o en arroz",
+          "peso_bruto_kg": 1.8,
+          "peso_neto_kg": 0.8,
+          "energia_kcal": 8,
+          "proteina_g": 0.6,
+          "grasa_g": 0,
+          "carbohidrato_g": 1.5,
+          "hierro_mg": 0.1,
+          "retinol_ug": 2,
+          "porcion_comestible_pct": 43
+        },
+        {
+          "preparacion": "en cau cau o agüadito",
+          "peso_bruto_kg": 3.6,
+          "peso_neto_kg": 1.6,
+          "energia_kcal": 17,
+          "proteina_g": 1.1,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 3,
+          "hierro_mg": 0.3,
+          "retinol_ug": 5,
+          "porcion_comestible_pct": 44
+        }
+      ]
+    },
+    {
+      "orden": 38,
+      "codigo": "DA038",
+      "categoria_id": 7,
+      "nombre": "ARVEJAS SECAS",
+      "dosificaciones": [
+        {
+          "preparacion": "acompañado de cereal",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 211,
+          "proteina_g": 13,
+          "grasa_g": 1.9,
+          "carbohidrato_g": 36.7,
+          "hierro_mg": 1.6,
+          "retinol_ug": 6,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 39,
+      "codigo": "DA039",
+      "categoria_id": 7,
+      "nombre": "HARINA DE ARVEJAS",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 67,
+          "proteina_g": 4.3,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 12.1,
+          "hierro_mg": 1.3,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 40,
+      "codigo": "DA040",
+      "categoria_id": 7,
+      "nombre": "FRIJOL CANARIO SECO",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 203,
+          "proteina_g": 13.1,
+          "grasa_g": 1.3,
+          "carbohidrato_g": 36.1,
+          "hierro_mg": 4,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 68,
+          "proteina_g": 4.4,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 12,
+          "hierro_mg": 1.3,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en ensaladas",
+          "peso_bruto_kg": 4,
+          "peso_neto_kg": 4,
+          "energia_kcal": 136,
+          "proteina_g": 8.8,
+          "grasa_g": 0.8,
+          "carbohidrato_g": 24.2,
+          "hierro_mg": 2.7,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 41,
+      "codigo": "DA041",
+      "categoria_id": 7,
+      "nombre": "FRIJOL CANARIO FRESCO",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 4,
+          "peso_neto_kg": 1.9,
+          "energia_kcal": 32,
+          "proteina_g": 1.9,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 6,
+          "hierro_mg": 0.6,
+          "retinol_ug": 2,
+          "porcion_comestible_pct": 48
+        },
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 12,
+          "peso_neto_kg": 5.9,
+          "energia_kcal": 98,
+          "proteina_g": 5.7,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 18.5,
+          "hierro_mg": 1.8,
+          "retinol_ug": 6,
+          "porcion_comestible_pct": 49
+        }
+      ]
+    },
+    {
+      "orden": 42,
+      "codigo": "DA042",
+      "categoria_id": 7,
+      "nombre": "GARBANZOS",
+      "dosificaciones": [
+        {
+          "preparacion": "acompañado con cereal",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 217,
+          "proteina_g": 11.5,
+          "grasa_g": 3.7,
+          "carbohidrato_g": 36.1,
+          "hierro_mg": 5,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en sopas o ensaladas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 72,
+          "proteina_g": 3.8,
+          "grasa_g": 1.2,
+          "carbohidrato_g": 12,
+          "hierro_mg": 1.7,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 43,
+      "codigo": "DA043",
+      "categoria_id": 7,
+      "nombre": "HABAS FRESCAS (CON CÁSCARA)",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas con verduras",
+          "peso_bruto_kg": 4.5,
+          "peso_neto_kg": 1.6,
+          "energia_kcal": 24,
+          "proteina_g": 1.8,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 4.1,
+          "hierro_mg": 0.3,
+          "retinol_ug": 2,
+          "porcion_comestible_pct": 35
+        },
+        {
+          "preparacion": "ensaladas",
+          "peso_bruto_kg": 7.6,
+          "peso_neto_kg": 2.7,
+          "energia_kcal": 40,
+          "proteina_g": 3,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 6.9,
+          "hierro_mg": 0.5,
+          "retinol_ug": 3,
+          "porcion_comestible_pct": 35
+        },
+        {
+          "preparacion": "acompañado con cereal",
+          "peso_bruto_kg": 11,
+          "peso_neto_kg": 4,
+          "energia_kcal": 60,
+          "proteina_g": 4.5,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 10.3,
+          "hierro_mg": 0.8,
+          "retinol_ug": 4,
+          "porcion_comestible_pct": 36
+        }
+      ]
+    },
+    {
+      "orden": 44,
+      "codigo": "DA044",
+      "categoria_id": 7,
+      "nombre": "HABAS SECAS (SIN CÁSCARA)",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas con verduras, ensaladas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 68,
+          "proteina_g": 4.8,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 12,
+          "hierro_mg": 2.6,
+          "retinol_ug": 1,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "acompañado con cereal",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 6,
+          "energia_kcal": 204,
+          "proteina_g": 14.3,
+          "grasa_g": 0.9,
+          "carbohidrato_g": 36.1,
+          "hierro_mg": 7.8,
+          "retinol_ug": 4,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 45,
+      "codigo": "DA045",
+      "categoria_id": 7,
+      "nombre": "HARINA DE HABAS",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 69,
+          "proteina_g": 4.9,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 11.9,
+          "hierro_mg": 1.3,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 46,
+      "codigo": "DA046",
+      "categoria_id": 7,
+      "nombre": "LENTEJAS",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas o ensaladas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 68,
+          "proteina_g": 4.5,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 12.2,
+          "hierro_mg": 1,
+          "retinol_ug": 1,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "acompañado con cereal",
+          "peso_bruto_kg": 7,
+          "peso_neto_kg": 7,
+          "energia_kcal": 237,
+          "proteina_g": 15.8,
+          "grasa_g": 0.7,
+          "carbohidrato_g": 42.7,
+          "hierro_mg": 3.4,
+          "retinol_ug": 3,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 47,
+      "codigo": "DA047",
+      "categoria_id": 7,
+      "nombre": "PALLARES",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 66,
+          "proteina_g": 0.5,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 12.3,
+          "hierro_mg": 1.3,
+          "retinol_ug": 1,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en ensaladas",
+          "peso_bruto_kg": 3.5,
+          "peso_neto_kg": 3.5,
+          "energia_kcal": 116,
+          "proteina_g": 0.8,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 21.5,
+          "hierro_mg": 2.3,
+          "retinol_ug": 1,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "acompañado con cereal",
+          "peso_bruto_kg": 6.5,
+          "peso_neto_kg": 6.5,
+          "energia_kcal": 215,
+          "proteina_g": 1.6,
+          "grasa_g": 0.8,
+          "carbohidrato_g": 39.9,
+          "hierro_mg": 4.4,
+          "retinol_ug": 2,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 48,
+      "codigo": "DA048",
+      "categoria_id": 8,
+      "nombre": "ACEITE VEGETAL",
+      "dosificaciones": [
+        {
+          "preparacion": "en aderezo de arroz",
+          "peso_bruto_kg": 0.8,
+          "peso_neto_kg": 0.8,
+          "energia_kcal": 71,
+          "proteina_g": 0,
+          "grasa_g": 8,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en ensaladas",
+          "peso_bruto_kg": 0.3,
+          "peso_neto_kg": 0.3,
+          "energia_kcal": 27,
+          "proteina_g": 0,
+          "grasa_g": 3,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en frituras",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.5,
+          "energia_kcal": 221,
+          "proteina_g": 0,
+          "grasa_g": 25,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en mayonesa",
+          "peso_bruto_kg": 0.5,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 44,
+          "proteina_g": 0,
+          "grasa_g": 5,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.5,
+          "energia_kcal": 133,
+          "proteina_g": 0,
+          "grasa_g": 15,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en encebollado",
+          "peso_bruto_kg": 0.3,
+          "peso_neto_kg": 0.3,
+          "energia_kcal": 27,
+          "proteina_g": 0,
+          "grasa_g": 3,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en aderezo de guisos",
+          "peso_bruto_kg": 0.3,
+          "peso_neto_kg": 0.3,
+          "energia_kcal": 27,
+          "proteina_g": 0,
+          "grasa_g": 3,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en papa a la huancaina",
+          "peso_bruto_kg": 0.1,
+          "peso_neto_kg": 0.1,
+          "energia_kcal": 9,
+          "proteina_g": 0,
+          "grasa_g": 1,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en salsa criolla y vinagreta",
+          "peso_bruto_kg": 1,
+          "peso_neto_kg": 1,
+          "energia_kcal": 88,
+          "proteina_g": 0,
+          "grasa_g": 10,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 49,
+      "codigo": "DA049",
+      "categoria_id": 8,
+      "nombre": "MANÍ TOSTADO",
+      "dosificaciones": [
+        {
+          "preparacion": "en carapulca o en salsa",
+          "peso_bruto_kg": 0.5,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 30,
+          "proteina_g": 1.4,
+          "grasa_g": 2.6,
+          "carbohidrato_g": 0.8,
+          "hierro_mg": 0.1,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 50,
+      "codigo": "DA050",
+      "categoria_id": 8,
+      "nombre": "MARGARINA VEGETAL",
+      "dosificaciones": [
+        {
+          "preparacion": "en el pan, soufflé",
+          "peso_bruto_kg": 0.7,
+          "peso_neto_kg": 0.7,
+          "energia_kcal": 51,
+          "proteina_g": 0,
+          "grasa_g": 5.7,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en aderezo de puré",
+          "peso_bruto_kg": 0.5,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 36,
+          "proteina_g": 0,
+          "grasa_g": 4.1,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en salsas o guisos",
+          "peso_bruto_kg": 0.3,
+          "peso_neto_kg": 0.3,
+          "energia_kcal": 22,
+          "proteina_g": 0,
+          "grasa_g": 2.4,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 0.4,
+          "peso_neto_kg": 0.4,
+          "energia_kcal": 29,
+          "proteina_g": 0,
+          "grasa_g": 3.2,
+          "carbohidrato_g": 0,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 51,
+      "codigo": "DA051",
+      "categoria_id": 9,
+      "nombre": "ALBAHACA",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopa menestrón, en salsa de tallarín",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.1,
+          "energia_kcal": 5,
+          "proteina_g": 0.3,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 0.8,
+          "hierro_mg": 0.6,
+          "retinol_ug": 27,
+          "porcion_comestible_pct": 74
+        },
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 0.7,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 2,
+          "proteina_g": 0.1,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 0.4,
+          "hierro_mg": 0.3,
+          "retinol_ug": 12,
+          "porcion_comestible_pct": 70
+        }
+      ]
+    },
+    {
+      "orden": 52,
+      "codigo": "DA052",
+      "categoria_id": 9,
+      "nombre": "ACELGA",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos, en purés y pastel de acelga",
+          "peso_bruto_kg": 13,
+          "peso_neto_kg": 10.7,
+          "energia_kcal": 29,
+          "proteina_g": 2.3,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 5.6,
+          "hierro_mg": 2.6,
+          "retinol_ug": 188,
+          "porcion_comestible_pct": 82
+        }
+      ]
+    },
+    {
+      "orden": 53,
+      "codigo": "DA053",
+      "categoria_id": 9,
+      "nombre": "APIO",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopa de verduras, picado tallo y hojas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1.6,
+          "energia_kcal": 3,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.7,
+          "hierro_mg": 0.2,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 78
+        },
+        {
+          "preparacion": "en ensalada mixta, picado con tallo y hojas",
+          "peso_bruto_kg": 3.5,
+          "peso_neto_kg": 2.7,
+          "energia_kcal": 6,
+          "proteina_g": 0.2,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 1.3,
+          "hierro_mg": 0.4,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 78
+        },
+        {
+          "preparacion": "en sopa de verduras (hojas)",
+          "peso_bruto_kg": 1.6,
+          "peso_neto_kg": 1.6,
+          "energia_kcal": 3,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.8,
+          "hierro_mg": 0.2,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 54,
+      "codigo": "DA054",
+      "categoria_id": 9,
+      "nombre": "AJÍ AMARILLO (ENTERO-FRESCO)",
+      "dosificaciones": [
+        {
+          "preparacion": "en aderezo de escabeche",
+          "peso_bruto_kg": 0.2,
+          "peso_neto_kg": 0.2,
+          "energia_kcal": 1,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.2,
+          "hierro_mg": 0,
+          "retinol_ug": 8,
+          "porcion_comestible_pct": 94
+        },
+        {
+          "preparacion": "en papa rellena, seco y en guiso",
+          "peso_bruto_kg": 0.1,
+          "peso_neto_kg": 0.1,
+          "energia_kcal": 0.5,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.1,
+          "hierro_mg": 0,
+          "retinol_ug": 5,
+          "porcion_comestible_pct": 92
+        },
+        {
+          "preparacion": "en papa a la huancaína",
+          "peso_bruto_kg": 0.5,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 2,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.4,
+          "hierro_mg": 0,
+          "retinol_ug": 22,
+          "porcion_comestible_pct": 94
+        }
+      ]
+    },
+    {
+      "orden": 55,
+      "codigo": "DA055",
+      "categoria_id": 9,
+      "nombre": "AJÍ AMARILLO (MOLIDO)",
+      "dosificaciones": [
+        {
+          "preparacion": "en aderezo de cau cau, escabeche, papa huancaína o causa",
+          "peso_bruto_kg": 1.2,
+          "peso_neto_kg": 1.2,
+          "energia_kcal": 6,
+          "proteina_g": 0.2,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 1.1,
+          "hierro_mg": 0.4,
+          "retinol_ug": 67,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 56,
+      "codigo": "DA056",
+      "categoria_id": 9,
+      "nombre": "AJÍ PANCA (SECO MOLIDO)",
+      "dosificaciones": [
+        {
+          "preparacion": "en aderezo de guisos",
+          "peso_bruto_kg": 1.2,
+          "peso_neto_kg": 1.2,
+          "energia_kcal": 35,
+          "proteina_g": 0.8,
+          "grasa_g": 0.9,
+          "carbohidrato_g": 7,
+          "hierro_mg": 0.7,
+          "retinol_ug": 33,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 57,
+      "codigo": "DA057",
+      "categoria_id": 9,
+      "nombre": "AJÍ PANCA (SECO ENTERO)",
+      "dosificaciones": [
+        {
+          "preparacion": "en aderezo de guiso",
+          "peso_bruto_kg": 0.3,
+          "peso_neto_kg": 0.2,
+          "energia_kcal": 6,
+          "proteina_g": 0.2,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 1.3,
+          "hierro_mg": 0.1,
+          "retinol_ug": 97,
+          "porcion_comestible_pct": 75
+        }
+      ]
+    },
+    {
+      "orden": 58,
+      "codigo": "DA058",
+      "categoria_id": 9,
+      "nombre": "AJO",
+      "dosificaciones": [
+        {
+          "preparacion": "en aderezo de arroz, guisos, en papa rellena y puré",
+          "peso_bruto_kg": 0.1,
+          "peso_neto_kg": 0.1,
+          "energia_kcal": 1,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.3,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 97
+        },
+        {
+          "preparacion": "en tallarines al pesto y ají de pollo",
+          "peso_bruto_kg": 0.2,
+          "peso_neto_kg": 0.2,
+          "energia_kcal": 2,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.6,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 97
+        }
+      ]
+    },
+    {
+      "orden": 59,
+      "codigo": "DA059",
+      "categoria_id": 9,
+      "nombre": "BETARRAGA (REMOLACHA)",
+      "dosificaciones": [
+        {
+          "preparacion": "en ensalada sola",
+          "peso_bruto_kg": 12,
+          "peso_neto_kg": 10.8,
+          "energia_kcal": 48,
+          "proteina_g": 1.8,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 10.3,
+          "hierro_mg": 0.9,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 90
+        },
+        {
+          "preparacion": "en ensalada mixta",
+          "peso_bruto_kg": 5.2,
+          "peso_neto_kg": 4.6,
+          "energia_kcal": 20,
+          "proteina_g": 0.8,
+          "grasa_g": 0,
+          "carbohidrato_g": 4.4,
+          "hierro_mg": 0.4,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 89
+        }
+      ]
+    },
+    {
+      "orden": 60,
+      "codigo": "DA060",
+      "categoria_id": 9,
+      "nombre": "CAIGUA",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 5.2,
+          "peso_neto_kg": 4.6,
+          "energia_kcal": 20,
+          "proteina_g": 0.8,
+          "grasa_g": 0,
+          "carbohidrato_g": 4.4,
+          "hierro_mg": 0.4,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 89
+        },
+        {
+          "preparacion": "Preparación 2",
+          "peso_bruto_kg": 9.6,
+          "peso_neto_kg": 9.1,
+          "energia_kcal": 14,
+          "proteina_g": 0.5,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 3,
+          "hierro_mg": 0.8,
+          "retinol_ug": 8,
+          "porcion_comestible_pct": 95
+        },
+        {
+          "preparacion": "Preparación 3",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 9.5,
+          "energia_kcal": 14,
+          "proteina_g": 0.5,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 3.1,
+          "hierro_mg": 0.9,
+          "retinol_ug": 9,
+          "porcion_comestible_pct": 95
+        },
+        {
+          "preparacion": "en ensalada",
+          "peso_bruto_kg": 3.7,
+          "peso_neto_kg": 3.4,
+          "energia_kcal": 5,
+          "proteina_g": 0.2,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 1.1,
+          "hierro_mg": 0.3,
+          "retinol_ug": 3,
+          "porcion_comestible_pct": 93
+        }
+      ]
+    },
+    {
+      "orden": 61,
+      "codigo": "DA061",
+      "categoria_id": 9,
+      "nombre": "CEBOLLA CHINA",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 0.5,
+          "peso_neto_kg": 0.4,
+          "energia_kcal": 2,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.3,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 82
+        },
+        {
+          "preparacion": "Preparación 2",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1.7,
+          "energia_kcal": 7,
+          "proteina_g": 0.4,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 1.3,
+          "hierro_mg": 0.2,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 85
+        }
+      ]
+    },
+    {
+      "orden": 62,
+      "codigo": "DA062",
+      "categoria_id": 9,
+      "nombre": "CEBOLLA DE CABEZA",
+      "dosificaciones": [
+        {
+          "preparacion": "en aderezo de sopa",
+          "peso_bruto_kg": 0.6,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 3,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.6,
+          "hierro_mg": 0.1,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 91
+        },
+        {
+          "preparacion": "en ensaladas, tallarín y ají de gallina",
+          "peso_bruto_kg": 4,
+          "peso_neto_kg": 3.7,
+          "energia_kcal": 18,
+          "proteina_g": 0.5,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 4.2,
+          "hierro_mg": 0.4,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 93
+        },
+        {
+          "preparacion": "en aderezo, guisos, hamburguesas",
+          "peso_bruto_kg": 1.3,
+          "peso_neto_kg": 1.2,
+          "energia_kcal": 6,
+          "proteina_g": 0.2,
+          "grasa_g": 0,
+          "carbohidrato_g": 1.3,
+          "hierro_mg": 0.1,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 92
+        },
+        {
+          "preparacion": "en sudado o escabeche",
+          "peso_bruto_kg": 6.2,
+          "peso_neto_kg": 5.7,
+          "energia_kcal": 28,
+          "proteina_g": 0.8,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 6.4,
+          "hierro_mg": 0.7,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 93
+        },
+        {
+          "preparacion": "en saltado",
+          "peso_bruto_kg": 4.4,
+          "peso_neto_kg": 4.1,
+          "energia_kcal": 20,
+          "proteina_g": 0.6,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 4.6,
+          "hierro_mg": 0.5,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 93
+        },
+        {
+          "preparacion": "en papa rellena, arroz con pollo",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1.8,
+          "energia_kcal": 9,
+          "proteina_g": 0.3,
+          "grasa_g": 0,
+          "carbohidrato_g": 2.1,
+          "hierro_mg": 0.2,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 92
+        },
+        {
+          "preparacion": "en salsa criolla",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.3,
+          "energia_kcal": 11,
+          "proteina_g": 0.3,
+          "grasa_g": 0,
+          "carbohidrato_g": 2.6,
+          "hierro_mg": 0.3,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 93
+        }
+      ]
+    },
+    {
+      "orden": 63,
+      "codigo": "DA063",
+      "categoria_id": 9,
+      "nombre": "COL CRESPA",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.4,
+          "energia_kcal": 6,
+          "proteina_g": 0.4,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 1.2,
+          "hierro_mg": 0.1,
+          "retinol_ug": 4,
+          "porcion_comestible_pct": 97
+        },
+        {
+          "preparacion": "en ensalada",
+          "peso_bruto_kg": 5,
+          "peso_neto_kg": 4.9,
+          "energia_kcal": 12,
+          "proteina_g": 0.7,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 2.4,
+          "hierro_mg": 0.2,
+          "retinol_ug": 7,
+          "porcion_comestible_pct": 98
+        },
+        {
+          "preparacion": "en saltado",
+          "peso_bruto_kg": 15,
+          "peso_neto_kg": 14.7,
+          "energia_kcal": 35,
+          "proteina_g": 2.2,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 7.2,
+          "hierro_mg": 0.6,
+          "retinol_ug": 22,
+          "porcion_comestible_pct": 98
+        }
+      ]
+    },
+    {
+      "orden": 64,
+      "codigo": "DA064",
+      "categoria_id": 9,
+      "nombre": "COLIFLOR",
+      "dosificaciones": [
+        {
+          "preparacion": "en saltado o arrebozado",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 9.5,
+          "energia_kcal": 27,
+          "proteina_g": 2.1,
+          "grasa_g": 0.6,
+          "carbohidrato_g": 4.2,
+          "hierro_mg": 0.6,
+          "retinol_ug": 3,
+          "porcion_comestible_pct": 95
+        },
+        {
+          "preparacion": "en ensalada",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 5.7,
+          "energia_kcal": 16,
+          "proteina_g": 1.3,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 2.5,
+          "hierro_mg": 0.3,
+          "retinol_ug": 2,
+          "porcion_comestible_pct": 95
+        }
+      ]
+    },
+    {
+      "orden": 65,
+      "codigo": "DA065",
+      "categoria_id": 9,
+      "nombre": "CULANTRO",
+      "dosificaciones": [
+        {
+          "preparacion": "en arroz con carne o pollo",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1,
+          "energia_kcal": 4,
+          "proteina_g": 0.3,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 0.7,
+          "hierro_mg": 0.5,
+          "retinol_ug": 110,
+          "porcion_comestible_pct": 67
+        },
+        {
+          "preparacion": "en seco de carne",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1.3,
+          "energia_kcal": 6,
+          "proteina_g": 0.4,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 0.9,
+          "hierro_mg": 0.7,
+          "retinol_ug": 147,
+          "porcion_comestible_pct": 67
+        },
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 0.6,
+          "peso_neto_kg": 0.4,
+          "energia_kcal": 2,
+          "proteina_g": 0.1,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 0.3,
+          "hierro_mg": 0.2,
+          "retinol_ug": 43,
+          "porcion_comestible_pct": 65
+        },
+        {
+          "preparacion": "en aguadito",
+          "peso_bruto_kg": 0.5,
+          "peso_neto_kg": 0.3,
+          "energia_kcal": 1,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.2,
+          "hierro_mg": 0.2,
+          "retinol_ug": 36,
+          "porcion_comestible_pct": 65
+        }
+      ]
+    },
+    {
+      "orden": 66,
+      "codigo": "DA066",
+      "categoria_id": 9,
+      "nombre": "ESPINACA",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopa crema",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 2.8,
+          "energia_kcal": 9,
+          "proteina_g": 0.8,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 1.4,
+          "hierro_mg": 1.2,
+          "retinol_ug": 106,
+          "porcion_comestible_pct": 94
+        },
+        {
+          "preparacion": "en guisos o en puré",
+          "peso_bruto_kg": 8,
+          "peso_neto_kg": 7.6,
+          "energia_kcal": 24,
+          "proteina_g": 2.1,
+          "grasa_g": 0.5,
+          "carbohidrato_g": 3.7,
+          "hierro_mg": 3.3,
+          "retinol_ug": 287,
+          "porcion_comestible_pct": 95
+        },
+        {
+          "preparacion": "en salsa para tallarín",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1.9,
+          "energia_kcal": 6,
+          "proteina_g": 0.5,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 0.9,
+          "hierro_mg": 0.8,
+          "retinol_ug": 71,
+          "porcion_comestible_pct": 94
+        }
+      ]
+    },
+    {
+      "orden": 67,
+      "codigo": "DA067",
+      "categoria_id": 9,
+      "nombre": "HUACATAY",
+      "dosificaciones": [
+        {
+          "preparacion": "en salsa ocopa",
+          "peso_bruto_kg": 0.2,
+          "peso_neto_kg": 0.1,
+          "energia_kcal": 0.1,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.1,
+          "hierro_mg": 0.1,
+          "retinol_ug": 4.2,
+          "porcion_comestible_pct": 49
+        },
+        {
+          "preparacion": "en guisos o chupe",
+          "peso_bruto_kg": 0.2,
+          "peso_neto_kg": 0.1,
+          "energia_kcal": 0.1,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.1,
+          "hierro_mg": 0.1,
+          "retinol_ug": 4.2,
+          "porcion_comestible_pct": 49
+        }
+      ]
+    },
+    {
+      "orden": 68,
+      "codigo": "DA068",
+      "categoria_id": 9,
+      "nombre": "LECHUGA",
+      "dosificaciones": [
+        {
+          "preparacion": "para el decorado",
+          "peso_bruto_kg": 1.2,
+          "peso_neto_kg": 1.1,
+          "energia_kcal": 1,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.2,
+          "hierro_mg": 0.1,
+          "retinol_ug": 7,
+          "porcion_comestible_pct": 94
+        },
+        {
+          "preparacion": "en ensalada",
+          "peso_bruto_kg": 2.5,
+          "peso_neto_kg": 2.4,
+          "energia_kcal": 3,
+          "proteina_g": 0.3,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.5,
+          "hierro_mg": 0.2,
+          "retinol_ug": 15,
+          "porcion_comestible_pct": 96
+        }
+      ]
+    },
+    {
+      "orden": 69,
+      "codigo": "DA069",
+      "categoria_id": 9,
+      "nombre": "NABO",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 1.2,
+          "peso_neto_kg": 1.1,
+          "energia_kcal": 2,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.4,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 94
+        },
+        {
+          "preparacion": "en guisos o ensaladas",
+          "peso_bruto_kg": 6,
+          "peso_neto_kg": 5.7,
+          "energia_kcal": 9,
+          "proteina_g": 0.3,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 2,
+          "hierro_mg": 0.1,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 95
+        }
+      ]
+    },
+    {
+      "orden": 70,
+      "codigo": "DA070",
+      "categoria_id": 9,
+      "nombre": "NABO - HOJAS",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 1.2,
+          "peso_neto_kg": 1.1,
+          "energia_kcal": 4,
+          "proteina_g": 0.3,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.8,
+          "hierro_mg": 0.3,
+          "retinol_ug": 35,
+          "porcion_comestible_pct": 95
+        }
+      ]
+    },
+    {
+      "orden": 71,
+      "codigo": "DA071",
+      "categoria_id": 9,
+      "nombre": "PAICO",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 0.5,
+          "peso_neto_kg": 0.2,
+          "energia_kcal": 1,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.2,
+          "hierro_mg": 0.1,
+          "retinol_ug": 13,
+          "porcion_comestible_pct": 44
+        }
+      ]
+    },
+    {
+      "orden": 72,
+      "codigo": "DA072",
+      "categoria_id": 9,
+      "nombre": "PEPINILLO",
+      "dosificaciones": [
+        {
+          "preparacion": "en ensalada mixta",
+          "peso_bruto_kg": 5.5,
+          "peso_neto_kg": 4.1,
+          "energia_kcal": 5,
+          "proteina_g": 0.2,
+          "grasa_g": 0,
+          "carbohidrato_g": 1.1,
+          "hierro_mg": 0.1,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 76
+        },
+        {
+          "preparacion": "en ensalada sola",
+          "peso_bruto_kg": 9,
+          "peso_neto_kg": 6.8,
+          "energia_kcal": 8,
+          "proteina_g": 0.3,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 1.8,
+          "hierro_mg": 0.2,
+          "retinol_ug": 1,
+          "porcion_comestible_pct": 76
+        },
+        {
+          "preparacion": "como acompañamiento",
+          "peso_bruto_kg": 3.5,
+          "peso_neto_kg": 2.6,
+          "energia_kcal": 3,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.7,
+          "hierro_mg": 0.1,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 75
+        }
+      ]
+    },
+    {
+      "orden": 73,
+      "codigo": "DA073",
+      "categoria_id": 9,
+      "nombre": "PEREJIL",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas o salsa criolla",
+          "peso_bruto_kg": 0.1,
+          "peso_neto_kg": 0.1,
+          "energia_kcal": 0,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.1,
+          "hierro_mg": 0.1,
+          "retinol_ug": 4,
+          "porcion_comestible_pct": 78
+        },
+        {
+          "preparacion": "en guisos o soufflé",
+          "peso_bruto_kg": 0.2,
+          "peso_neto_kg": 0.2,
+          "energia_kcal": 1,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.1,
+          "hierro_mg": 0.1,
+          "retinol_ug": 7,
+          "porcion_comestible_pct": 78
+        }
+      ]
+    },
+    {
+      "orden": 74,
+      "codigo": "DA074",
+      "categoria_id": 9,
+      "nombre": "PIMIENTO",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos",
+          "peso_bruto_kg": 0.5,
+          "peso_neto_kg": 0.4,
+          "energia_kcal": 1,
+          "proteina_g": 0.1,
+          "grasa_g": 1.8,
+          "carbohidrato_g": 0.3,
+          "hierro_mg": 0,
+          "retinol_ug": 5,
+          "porcion_comestible_pct": 80
+        }
+      ]
+    },
+    {
+      "orden": 75,
+      "codigo": "DA075",
+      "categoria_id": 9,
+      "nombre": "PORO",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1.5,
+          "energia_kcal": 6,
+          "proteina_g": 0.4,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 1.1,
+          "hierro_mg": 0.1,
+          "retinol_ug": 1,
+          "porcion_comestible_pct": 75
+        }
+      ]
+    },
+    {
+      "orden": 76,
+      "codigo": "DA076",
+      "categoria_id": 9,
+      "nombre": "RABANITO",
+      "dosificaciones": [
+        {
+          "preparacion": "en ensalada mixta",
+          "peso_bruto_kg": 8.5,
+          "peso_neto_kg": 7.7,
+          "energia_kcal": 11,
+          "proteina_g": 0.6,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 2.2,
+          "hierro_mg": 0.8,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 90
+        },
+        {
+          "preparacion": "en ensalada sola",
+          "peso_bruto_kg": 16.7,
+          "peso_neto_kg": 15.2,
+          "energia_kcal": 21,
+          "proteina_g": 1.2,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 4.4,
+          "hierro_mg": 1.5,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 91
+        }
+      ]
+    },
+    {
+      "orden": 77,
+      "codigo": "DA077",
+      "categoria_id": 9,
+      "nombre": "TOMATE",
+      "dosificaciones": [
+        {
+          "preparacion": "en aderezo de sopa",
+          "peso_bruto_kg": 1,
+          "peso_neto_kg": 0.9,
+          "energia_kcal": 2,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.4,
+          "hierro_mg": 0.1,
+          "retinol_ug": 3,
+          "porcion_comestible_pct": 90
+        },
+        {
+          "preparacion": "en saltado o estofado",
+          "peso_bruto_kg": 2.6,
+          "peso_neto_kg": 2.4,
+          "energia_kcal": 4,
+          "proteina_g": 0.2,
+          "grasa_g": 0,
+          "carbohidrato_g": 1,
+          "hierro_mg": 0.1,
+          "retinol_ug": 9,
+          "porcion_comestible_pct": 91
+        },
+        {
+          "preparacion": "en guiso, asado o adorno",
+          "peso_bruto_kg": 5.3,
+          "peso_neto_kg": 4.8,
+          "energia_kcal": 9,
+          "proteina_g": 0.4,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 2.1,
+          "hierro_mg": 0.3,
+          "retinol_ug": 18,
+          "porcion_comestible_pct": 91
+        },
+        {
+          "preparacion": "en ensalada o tallarín",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1.8,
+          "energia_kcal": 3,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.8,
+          "hierro_mg": 0.1,
+          "retinol_ug": 7,
+          "porcion_comestible_pct": 91
+        },
+        {
+          "preparacion": "ensalada mixta",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.4,
+          "energia_kcal": 3,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.6,
+          "hierro_mg": 0.1,
+          "retinol_ug": 5,
+          "porcion_comestible_pct": 90
+        }
+      ]
+    },
+    {
+      "orden": 78,
+      "codigo": "DA078",
+      "categoria_id": 9,
+      "nombre": "VAINITAS",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas y ensaladas",
+          "peso_bruto_kg": 3.6,
+          "peso_neto_kg": 3.3,
+          "energia_kcal": 12,
+          "proteina_g": 0.8,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 2.7,
+          "hierro_mg": 0.5,
+          "retinol_ug": 9,
+          "porcion_comestible_pct": 93
+        },
+        {
+          "preparacion": "en saltados",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 9.5,
+          "energia_kcal": 35,
+          "proteina_g": 2.3,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 7.7,
+          "hierro_mg": 1.3,
+          "retinol_ug": 27,
+          "porcion_comestible_pct": 95
+        },
+        {
+          "preparacion": "en soufflé y tomate relleno",
+          "peso_bruto_kg": 2.2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 7,
+          "proteina_g": 0.5,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 1.6,
+          "hierro_mg": 0.3,
+          "retinol_ug": 6,
+          "porcion_comestible_pct": 93
+        }
+      ]
+    },
+    {
+      "orden": 79,
+      "codigo": "DA079",
+      "categoria_id": 9,
+      "nombre": "ZANAHORIA",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas o aguaditos",
+          "peso_bruto_kg": 1,
+          "peso_neto_kg": 0.8,
+          "energia_kcal": 3,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.8,
+          "hierro_mg": 0,
+          "retinol_ug": 142,
+          "porcion_comestible_pct": 84
+        },
+        {
+          "preparacion": "en ensalada o saltado",
+          "peso_bruto_kg": 4,
+          "peso_neto_kg": 3.4,
+          "energia_kcal": 14,
+          "proteina_g": 0.2,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 3.2,
+          "hierro_mg": 0.2,
+          "retinol_ug": 582,
+          "porcion_comestible_pct": 85
+        },
+        {
+          "preparacion": "en seco, soufle, estofado",
+          "peso_bruto_kg": 4,
+          "peso_neto_kg": 3.4,
+          "energia_kcal": 14,
+          "proteina_g": 0.2,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 3.1,
+          "hierro_mg": 0.2,
+          "retinol_ug": 577,
+          "porcion_comestible_pct": 85
+        },
+        {
+          "preparacion": "en tallarines o arroz con pollo",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1.7,
+          "energia_kcal": 7,
+          "proteina_g": 0.1,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 1.6,
+          "hierro_mg": 0.1,
+          "retinol_ug": 288,
+          "porcion_comestible_pct": 85
+        }
+      ]
+    },
+    {
+      "orden": 80,
+      "codigo": "DA080",
+      "categoria_id": 9,
+      "nombre": "ZAPALLO MACRE",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopas cazuela",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 2.1,
+          "energia_kcal": 6,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 1.4,
+          "hierro_mg": 0.1,
+          "retinol_ug": 33,
+          "porcion_comestible_pct": 71
+        },
+        {
+          "preparacion": "en torrejas",
+          "peso_bruto_kg": 5,
+          "peso_neto_kg": 3.6,
+          "energia_kcal": 9,
+          "proteina_g": 0.3,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 2.3,
+          "hierro_mg": 0.2,
+          "retinol_ug": 55,
+          "porcion_comestible_pct": 72
+        },
+        {
+          "preparacion": "en sopas cremas o locro",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 7.2,
+          "energia_kcal": 19,
+          "proteina_g": 0.5,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 4.6,
+          "hierro_mg": 0.4,
+          "retinol_ug": 110,
+          "porcion_comestible_pct": 72
+        }
+      ]
+    },
+    {
+      "orden": 81,
+      "codigo": "DA081",
+      "categoria_id": 10,
+      "nombre": "PAPA BLANCA",
+      "dosificaciones": [
+        {
+          "preparacion": "en sopa crema, ají de gallina, estofado, acompañamiento",
+          "peso_bruto_kg": 13,
+          "peso_neto_kg": 11.2,
+          "energia_kcal": 109,
+          "proteina_g": 2.3,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 25,
+          "hierro_mg": 0.6,
+          "retinol_ug": 3,
+          "porcion_comestible_pct": 86
+        },
+        {
+          "preparacion": "en ensalada mixta",
+          "peso_bruto_kg": 5.5,
+          "peso_neto_kg": 4.7,
+          "energia_kcal": 45,
+          "proteina_g": 1,
+          "grasa_g": 0,
+          "carbohidrato_g": 10.4,
+          "hierro_mg": 0.2,
+          "retinol_ug": 1,
+          "porcion_comestible_pct": 85
+        },
+        {
+          "preparacion": "en causa o papa rellena",
+          "peso_bruto_kg": 17,
+          "peso_neto_kg": 14.6,
+          "energia_kcal": 142,
+          "proteina_g": 3.1,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 32.6,
+          "hierro_mg": 0.7,
+          "retinol_ug": 4,
+          "porcion_comestible_pct": 86
+        },
+        {
+          "preparacion": "en saltado con carne o menudencia, puré de verduras",
+          "peso_bruto_kg": 15,
+          "peso_neto_kg": 12.9,
+          "energia_kcal": 125,
+          "proteina_g": 2.7,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 28.8,
+          "hierro_mg": 0.6,
+          "retinol_ug": 4,
+          "porcion_comestible_pct": 86
+        },
+        {
+          "preparacion": "en ajiaco, cau-cau o locro",
+          "peso_bruto_kg": 15.5,
+          "peso_neto_kg": 13.4,
+          "energia_kcal": 129,
+          "proteina_g": 2.8,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 29.8,
+          "hierro_mg": 0.7,
+          "retinol_ug": 4,
+          "porcion_comestible_pct": 86
+        },
+        {
+          "preparacion": "en cazuela, aguadito o sancochado",
+          "peso_bruto_kg": 3.5,
+          "peso_neto_kg": 3,
+          "energia_kcal": 29,
+          "proteina_g": 0.6,
+          "grasa_g": 0,
+          "carbohidrato_g": 6.6,
+          "hierro_mg": 0.1,
+          "retinol_ug": 1,
+          "porcion_comestible_pct": 85
+        },
+        {
+          "preparacion": "en puré solo o fritura",
+          "peso_bruto_kg": 20,
+          "peso_neto_kg": 17.2,
+          "energia_kcal": 167,
+          "proteina_g": 3.6,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 38.4,
+          "hierro_mg": 0.9,
+          "retinol_ug": 5,
+          "porcion_comestible_pct": 86
+        }
+      ]
+    },
+    {
+      "orden": 82,
+      "codigo": "DA082",
+      "categoria_id": 10,
+      "nombre": "PAPA SECA",
+      "dosificaciones": [
+        {
+          "preparacion": "en carapulca (con arroz)",
+          "peso_bruto_kg": 5,
+          "peso_neto_kg": 5,
+          "energia_kcal": 161,
+          "proteina_g": 4.1,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 36.3,
+          "hierro_mg": 2.3,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en carapulca (sin arroz)",
+          "peso_bruto_kg": 6.5,
+          "peso_neto_kg": 6.5,
+          "energia_kcal": 209,
+          "proteina_g": 5.3,
+          "grasa_g": 0.5,
+          "carbohidrato_g": 47.2,
+          "hierro_mg": 2.9,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 83,
+      "codigo": "DA083",
+      "categoria_id": 10,
+      "nombre": "CAMOTE AMARILLO",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos con arroz",
+          "peso_bruto_kg": 13.5,
+          "peso_neto_kg": 10.9,
+          "energia_kcal": 120,
+          "proteina_g": 1.5,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 28.1,
+          "hierro_mg": 1.5,
+          "retinol_ug": 12,
+          "porcion_comestible_pct": 81
+        },
+        {
+          "preparacion": "en guisos sin arroz",
+          "peso_bruto_kg": 20,
+          "peso_neto_kg": 16.4,
+          "energia_kcal": 180,
+          "proteina_g": 2.3,
+          "grasa_g": 0.5,
+          "carbohidrato_g": 42.1,
+          "hierro_mg": 2.3,
+          "retinol_ug": 18,
+          "porcion_comestible_pct": 82
+        },
+        {
+          "preparacion": "en dulce de camote",
+          "peso_bruto_kg": 13,
+          "peso_neto_kg": 10.5,
+          "energia_kcal": 116,
+          "proteina_g": 1.5,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 27.1,
+          "hierro_mg": 1.5,
+          "retinol_ug": 12,
+          "porcion_comestible_pct": 81
+        }
+      ]
+    },
+    {
+      "orden": 84,
+      "codigo": "DA084",
+      "categoria_id": 10,
+      "nombre": "HARINA DE CAMOTE",
+      "dosificaciones": [
+        {
+          "preparacion": "en postres",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 71,
+          "proteina_g": 0.4,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 16.9,
+          "hierro_mg": 1.1,
+          "retinol_ug": 308,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 85,
+      "codigo": "DA085",
+      "categoria_id": 10,
+      "nombre": "OLLUCO",
+      "dosificaciones": [
+        {
+          "preparacion": "en chupe",
+          "peso_bruto_kg": 8,
+          "peso_neto_kg": 8,
+          "energia_kcal": 50,
+          "proteina_g": 0.9,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 11.4,
+          "hierro_mg": 0.9,
+          "retinol_ug": 4,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en guiso o ajiaco",
+          "peso_bruto_kg": 20,
+          "peso_neto_kg": 20,
+          "energia_kcal": 124,
+          "proteina_g": 2.2,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 28.6,
+          "hierro_mg": 2.2,
+          "retinol_ug": 10,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 86,
+      "codigo": "DA086",
+      "categoria_id": 10,
+      "nombre": "HARINA DE CHUÑO",
+      "dosificaciones": [
+        {
+          "preparacion": "en compotas o broaster",
+          "peso_bruto_kg": 0.3,
+          "peso_neto_kg": 0.3,
+          "energia_kcal": 10,
+          "proteina_g": 0.2,
+          "grasa_g": 0,
+          "carbohidrato_g": 2.4,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en mazamorra morada",
+          "peso_bruto_kg": 1.7,
+          "peso_neto_kg": 1.7,
+          "energia_kcal": 55,
+          "proteina_g": 1.1,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 12.9,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 87,
+      "codigo": "DA087",
+      "categoria_id": 10,
+      "nombre": "YUCA",
+      "dosificaciones": [
+        {
+          "preparacion": "para acompañar platos",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 8.2,
+          "energia_kcal": 133,
+          "proteina_g": 0.7,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 32.2,
+          "hierro_mg": 0.4,
+          "retinol_ug": 1,
+          "porcion_comestible_pct": 82
+        },
+        {
+          "preparacion": "en sopas de verduras",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 2.5,
+          "energia_kcal": 40,
+          "proteina_g": 0.2,
+          "grasa_g": 0,
+          "carbohidrato_g": 9.7,
+          "hierro_mg": 0.1,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 82
+        },
+        {
+          "preparacion": "en guarnición de guiso (sin arroz)",
+          "peso_bruto_kg": 20,
+          "peso_neto_kg": 16.4,
+          "energia_kcal": 266,
+          "proteina_g": 1.3,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 64.5,
+          "hierro_mg": 0.8,
+          "retinol_ug": 2,
+          "porcion_comestible_pct": 82
+        }
+      ]
+    },
+    {
+      "orden": 88,
+      "codigo": "DA088",
+      "categoria_id": 10,
+      "nombre": "HARINA DE YUCA",
+      "dosificaciones": [
+        {
+          "preparacion": "en postres, otros",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 67,
+          "proteina_g": 0.3,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 16.2,
+          "hierro_mg": 0.9,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "Preparación 2",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 2.7,
+          "energia_kcal": 80,
+          "proteina_g": 0.2,
+          "grasa_g": 8.7,
+          "carbohidrato_g": 2,
+          "hierro_mg": 0.6,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 90
+        }
+      ]
+    },
+    {
+      "orden": 89,
+      "codigo": "DA089",
+      "categoria_id": 11,
+      "nombre": "ACEITUNA DE BOTIJA",
+      "dosificaciones": [
+        {
+          "preparacion": "en pan",
+          "peso_bruto_kg": 1,
+          "peso_neto_kg": 0.9,
+          "energia_kcal": 27,
+          "proteina_g": 0.1,
+          "grasa_g": 2.9,
+          "carbohidrato_g": 0.7,
+          "hierro_mg": 0.2,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 90
+        },
+        {
+          "preparacion": "en escabeche",
+          "peso_bruto_kg": 4,
+          "peso_neto_kg": 4,
+          "energia_kcal": 114,
+          "proteina_g": 1.4,
+          "grasa_g": 11.2,
+          "carbohidrato_g": 4.3,
+          "hierro_mg": 0.7,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 90,
+      "codigo": "DA090",
+      "categoria_id": 11,
+      "nombre": "COCO FRESCO SIN CÁSCARA",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre o cocada",
+          "peso_bruto_kg": 0.2,
+          "peso_neto_kg": 0.2,
+          "energia_kcal": 6,
+          "proteina_g": 0.1,
+          "grasa_g": 0.6,
+          "carbohidrato_g": 0.2,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 91,
+      "codigo": "DA091",
+      "categoria_id": 11,
+      "nombre": "COCO RALLADO",
+      "dosificaciones": [
+        {
+          "preparacion": "en arroz con leche",
+          "peso_bruto_kg": 0.2,
+          "peso_neto_kg": 0.2,
+          "energia_kcal": 6,
+          "proteina_g": 0.1,
+          "grasa_g": 0.6,
+          "carbohidrato_g": 0.2,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 92,
+      "codigo": "DA092",
+      "categoria_id": 11,
+      "nombre": "FRESA",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 8.4,
+          "energia_kcal": 34,
+          "proteina_g": 0.6,
+          "grasa_g": 0.7,
+          "carbohidrato_g": 7.4,
+          "hierro_mg": 1,
+          "retinol_ug": 6,
+          "porcion_comestible_pct": 84
+        }
+      ]
+    },
+    {
+      "orden": 93,
+      "codigo": "DA093",
+      "categoria_id": 11,
+      "nombre": "GRANADILLA",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre",
+          "peso_bruto_kg": 0.6,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 14,
+          "proteina_g": 0.2,
+          "grasa_g": 0,
+          "carbohidrato_g": null,
+          "hierro_mg": 0.3,
+          "retinol_ug": 2,
+          "porcion_comestible_pct": 88
+        }
+      ]
+    },
+    {
+      "orden": 94,
+      "codigo": "DA094",
+      "categoria_id": 11,
+      "nombre": "GUINDONES",
+      "dosificaciones": [
+        {
+          "preparacion": "en mazamorra morada",
+          "peso_bruto_kg": 0.6,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 14,
+          "proteina_g": 0.2,
+          "grasa_g": 0,
+          "carbohidrato_g": null,
+          "hierro_mg": 0.3,
+          "retinol_ug": 2,
+          "porcion_comestible_pct": 88
+        },
+        {
+          "preparacion": "en compota",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1.8,
+          "energia_kcal": 47,
+          "proteina_g": 0.6,
+          "grasa_g": 0.1,
+          "carbohidrato_g": null,
+          "hierro_mg": 1.1,
+          "retinol_ug": 7,
+          "porcion_comestible_pct": 90
+        }
+      ]
+    },
+    {
+      "orden": 95,
+      "codigo": "DA095",
+      "categoria_id": 11,
+      "nombre": "HIGOS SECOS",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre",
+          "peso_bruto_kg": 5,
+          "peso_neto_kg": 4.7,
+          "energia_kcal": 85,
+          "proteina_g": 1.7,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 21.8,
+          "hierro_mg": 1.1,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 94
+        }
+      ]
+    },
+    {
+      "orden": 96,
+      "codigo": "DA096",
+      "categoria_id": 11,
+      "nombre": "MELOCOTÓN SECO - HUESILLO",
+      "dosificaciones": [
+        {
+          "preparacion": "en mazamorra morada",
+          "peso_bruto_kg": 1.4,
+          "peso_neto_kg": 1,
+          "energia_kcal": 26,
+          "proteina_g": 0.3,
+          "grasa_g": 0.6,
+          "carbohidrato_g": 0.7,
+          "hierro_mg": 0.7,
+          "retinol_ug": 3,
+          "porcion_comestible_pct": 71
+        }
+      ]
+    },
+    {
+      "orden": 97,
+      "codigo": "DA097",
+      "categoria_id": 11,
+      "nombre": "LIMÓN DULCE",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre",
+          "peso_bruto_kg": 16,
+          "peso_neto_kg": 11,
+          "energia_kcal": 30,
+          "proteina_g": 0.7,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 6.5,
+          "hierro_mg": 0.2,
+          "retinol_ug": 7,
+          "porcion_comestible_pct": 69
+        }
+      ]
+    },
+    {
+      "orden": 98,
+      "codigo": "DA098",
+      "categoria_id": 11,
+      "nombre": "LIMÓN (JUGO)",
+      "dosificaciones": [
+        {
+          "preparacion": "en refresco",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 1,
+          "energia_kcal": 3,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.9,
+          "hierro_mg": 0,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 48
+        },
+        {
+          "preparacion": "en ensalada",
+          "peso_bruto_kg": 1,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 1,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 0.5,
+          "hierro_mg": 0,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 47
+        }
+      ]
+    },
+    {
+      "orden": 99,
+      "codigo": "DA099",
+      "categoria_id": 11,
+      "nombre": "MANDARINA (160 g, 1 unidad grande)",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre (100 unidades grandes)",
+          "peso_bruto_kg": 16,
+          "peso_neto_kg": 14.2,
+          "energia_kcal": 50,
+          "proteina_g": 0.9,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 12.2,
+          "hierro_mg": 0.4,
+          "retinol_ug": 7,
+          "porcion_comestible_pct": 89
+        }
+      ]
+    },
+    {
+      "orden": 100,
+      "codigo": "DA100",
+      "categoria_id": 11,
+      "nombre": "MANGO (200 g, 1 unidad mediana)",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre (100 unidades medianas)",
+          "peso_bruto_kg": 20,
+          "peso_neto_kg": 17,
+          "energia_kcal": 102,
+          "proteina_g": 0.7,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 27,
+          "hierro_mg": 0.7,
+          "retinol_ug": 270,
+          "porcion_comestible_pct": 85
+        }
+      ]
+    },
+    {
+      "orden": 101,
+      "codigo": "DA101",
+      "categoria_id": 11,
+      "nombre": "MANZANA (verde o de agua para refresco 120 g uni. med.)",
+      "dosificaciones": [
+        {
+          "preparacion": "Preparación general",
+          "peso_bruto_kg": 2.2,
+          "peso_neto_kg": 1.9,
+          "energia_kcal": 10,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 2.7,
+          "hierro_mg": 0.3,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 87
+        },
+        {
+          "preparacion": "en postre manzana delicia (160 g 100 unidades medianas)",
+          "peso_bruto_kg": 16,
+          "peso_neto_kg": 14.9,
+          "energia_kcal": 80,
+          "proteina_g": 0.4,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 21.7,
+          "hierro_mg": 2.1,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 93
+        },
+        {
+          "preparacion": "Preparación 3",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 2.7,
+          "energia_kcal": 14,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 3.9,
+          "hierro_mg": 0.4,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 89
+        }
+      ]
+    },
+    {
+      "orden": 102,
+      "codigo": "DA102",
+      "categoria_id": 11,
+      "nombre": "MARACUYÁ",
+      "dosificaciones": [
+        {
+          "preparacion": "en refresco",
+          "peso_bruto_kg": 3.5,
+          "peso_neto_kg": 1.4,
+          "energia_kcal": 9,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 2.2,
+          "hierro_mg": 0.4,
+          "retinol_ug": 57,
+          "porcion_comestible_pct": 40
+        }
+      ]
+    },
+    {
+      "orden": 103,
+      "codigo": "DA103",
+      "categoria_id": 11,
+      "nombre": "MELOCOTÓN O DURAZNO",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre",
+          "peso_bruto_kg": 10.5,
+          "peso_neto_kg": 8.4,
+          "energia_kcal": 39,
+          "proteina_g": 0.4,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 15,
+          "hierro_mg": 5,
+          "retinol_ug": 74,
+          "porcion_comestible_pct": 80
+        }
+      ]
+    },
+    {
+      "orden": 104,
+      "codigo": "DA104",
+      "categoria_id": 11,
+      "nombre": "MEMBRILLO",
+      "dosificaciones": [
+        {
+          "preparacion": "en avena",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 2.6,
+          "energia_kcal": 11,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 3,
+          "hierro_mg": 0.2,
+          "retinol_ug": 2,
+          "porcion_comestible_pct": 87
+        },
+        {
+          "preparacion": "Preparación 2",
+          "peso_bruto_kg": 5,
+          "peso_neto_kg": 4.4,
+          "energia_kcal": 19,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 5.1,
+          "hierro_mg": 0.3,
+          "retinol_ug": 4,
+          "porcion_comestible_pct": 88
+        }
+      ]
+    },
+    {
+      "orden": 105,
+      "codigo": "DA105",
+      "categoria_id": 11,
+      "nombre": "NARANJA",
+      "dosificaciones": [
+        {
+          "preparacion": "en jugo (vaso)",
+          "peso_bruto_kg": 50,
+          "peso_neto_kg": 26.1,
+          "energia_kcal": 86,
+          "proteina_g": 1.3,
+          "grasa_g": 0.5,
+          "carbohidrato_g": 21.4,
+          "hierro_mg": 0.5,
+          "retinol_ug": 18,
+          "porcion_comestible_pct": 52
+        },
+        {
+          "preparacion": "en postre",
+          "peso_bruto_kg": 25,
+          "peso_neto_kg": 12.9,
+          "energia_kcal": 43,
+          "proteina_g": 0.6,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 10.6,
+          "hierro_mg": 0.3,
+          "retinol_ug": 9,
+          "porcion_comestible_pct": 52
+        }
+      ]
+    },
+    {
+      "orden": 106,
+      "codigo": "DA106",
+      "categoria_id": 11,
+      "nombre": "NÍSPERO",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre",
+          "peso_bruto_kg": 10,
+          "peso_neto_kg": 6.2,
+          "energia_kcal": 29,
+          "proteina_g": 0.2,
+          "grasa_g": 0,
+          "carbohidrato_g": 7.9,
+          "hierro_mg": 0.2,
+          "retinol_ug": 43,
+          "porcion_comestible_pct": 62
+        }
+      ]
+    },
+    {
+      "orden": 107,
+      "codigo": "DA107",
+      "categoria_id": 11,
+      "nombre": "PAPAYA (1,530 kg unidad grande)",
+      "dosificaciones": [
+        {
+          "preparacion": "en jugo, en postre (10 unidades y 1/2 unidad grande)",
+          "peso_bruto_kg": 16.1,
+          "peso_neto_kg": 13.2,
+          "energia_kcal": 42,
+          "proteina_g": 0.5,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 10.8,
+          "hierro_mg": 0.4,
+          "retinol_ug": 83,
+          "porcion_comestible_pct": 82
+        }
+      ]
+    },
+    {
+      "orden": 108,
+      "codigo": "DA108",
+      "categoria_id": 11,
+      "nombre": "PACAE (160 g unidad mediana)",
+      "dosificaciones": [
+        {
+          "preparacion": "como postre (100 unidades medianas)",
+          "peso_bruto_kg": 16,
+          "peso_neto_kg": 5.6,
+          "energia_kcal": 31,
+          "proteina_g": 0.3,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 8.3,
+          "hierro_mg": 0.2,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 35
+        }
+      ]
+    },
+    {
+      "orden": 109,
+      "codigo": "DA109",
+      "categoria_id": 11,
+      "nombre": "PALTA (100 g unidad pequeña)",
+      "dosificaciones": [
+        {
+          "preparacion": "en ensalada mixta (50 unidades pequeñas)",
+          "peso_bruto_kg": 5,
+          "peso_neto_kg": 3.3,
+          "energia_kcal": 43,
+          "proteina_g": 0.6,
+          "grasa_g": 4.1,
+          "carbohidrato_g": 1.8,
+          "hierro_mg": 0.2,
+          "retinol_ug": 2,
+          "porcion_comestible_pct": 66
+        }
+      ]
+    },
+    {
+      "orden": 110,
+      "codigo": "DA110",
+      "categoria_id": 11,
+      "nombre": "PASA",
+      "dosificaciones": [
+        {
+          "preparacion": "en arroz con leche",
+          "peso_bruto_kg": 0.5,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 12,
+          "proteina_g": 0.1,
+          "grasa_g": 0,
+          "carbohidrato_g": 3.2,
+          "hierro_mg": 0.2,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 111,
+      "codigo": "DA111",
+      "categoria_id": 11,
+      "nombre": "PERO",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre",
+          "peso_bruto_kg": 11,
+          "peso_neto_kg": 9,
+          "energia_kcal": 50,
+          "proteina_g": 0.4,
+          "grasa_g": 0.6,
+          "carbohidrato_g": 12,
+          "hierro_mg": 0.3,
+          "retinol_ug": 6,
+          "porcion_comestible_pct": 82
+        }
+      ]
+    },
+    {
+      "orden": 112,
+      "codigo": "DA112",
+      "categoria_id": 11,
+      "nombre": "PIÑA (1,740 kg unidad grande y 1,150 kg unidad mediana)",
+      "dosificaciones": [
+        {
+          "preparacion": "en jugo (30 unidades medianas)",
+          "peso_bruto_kg": 34.5,
+          "peso_neto_kg": 21.7,
+          "energia_kcal": 83,
+          "proteina_g": 0.9,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 21.3,
+          "hierro_mg": 0.9,
+          "retinol_ug": 15,
+          "porcion_comestible_pct": 63
+        },
+        {
+          "preparacion": "en postre (10 unidades grandes)",
+          "peso_bruto_kg": 17.4,
+          "peso_neto_kg": 11.1,
+          "energia_kcal": 42,
+          "proteina_g": 0.4,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 10.9,
+          "hierro_mg": 0.4,
+          "retinol_ug": 8,
+          "porcion_comestible_pct": 64
+        },
+        {
+          "preparacion": "en preparación con avena (3 unidades grandes)",
+          "peso_bruto_kg": 5.2,
+          "peso_neto_kg": 3.3,
+          "energia_kcal": 13,
+          "proteina_g": 0.1,
+          "grasa_g": 0.1,
+          "carbohidrato_g": 3.3,
+          "hierro_mg": 0.1,
+          "retinol_ug": 2,
+          "porcion_comestible_pct": 64
+        }
+      ]
+    },
+    {
+      "orden": 113,
+      "codigo": "DA113",
+      "categoria_id": 11,
+      "nombre": "PLÁTANO DE LA ISLA (150 g unidad mediana)",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre",
+          "peso_bruto_kg": 15,
+          "peso_neto_kg": 10.2,
+          "energia_kcal": 93,
+          "proteina_g": 0.9,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 24.1,
+          "hierro_mg": 0.6,
+          "retinol_ug": 134,
+          "porcion_comestible_pct": 68
+        }
+      ]
+    },
+    {
+      "orden": 114,
+      "codigo": "DA114",
+      "categoria_id": 11,
+      "nombre": "PLÁTANO DE SEDA (190 g unidad grande y 170 g uni. med.)",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre (100 unidades medianas)",
+          "peso_bruto_kg": 17,
+          "peso_neto_kg": 11.9,
+          "energia_kcal": 99,
+          "proteina_g": 1.8,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 25,
+          "hierro_mg": 0.7,
+          "retinol_ug": 25,
+          "porcion_comestible_pct": 70
+        }
+      ]
+    },
+    {
+      "orden": 115,
+      "codigo": "DA115",
+      "categoria_id": 11,
+      "nombre": "PLÁTANO PALILLO (220 g unidad grande)",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre (100 unidades grandes)",
+          "peso_bruto_kg": 22,
+          "peso_neto_kg": 15.6,
+          "energia_kcal": 187,
+          "proteina_g": 2.2,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 49.5,
+          "hierro_mg": 0.9,
+          "retinol_ug": 33,
+          "porcion_comestible_pct": 71
+        }
+      ]
+    },
+    {
+      "orden": 116,
+      "codigo": "DA116",
+      "categoria_id": 11,
+      "nombre": "PLÁTANO VERDE (260 g uni. grande y 180 g uni. mediana)",
+      "dosificaciones": [
+        {
+          "preparacion": "Preparación general",
+          "peso_bruto_kg": 13,
+          "peso_neto_kg": 8.8,
+          "energia_kcal": 134,
+          "proteina_g": 0.9,
+          "grasa_g": 0.2,
+          "carbohidrato_g": 36,
+          "hierro_mg": 0.4,
+          "retinol_ug": 115,
+          "porcion_comestible_pct": 68
+        },
+        {
+          "preparacion": "Preparación 2",
+          "peso_bruto_kg": 26,
+          "peso_neto_kg": 17.7,
+          "energia_kcal": 269,
+          "proteina_g": 1.8,
+          "grasa_g": 0.4,
+          "carbohidrato_g": 72.3,
+          "hierro_mg": 0.9,
+          "retinol_ug": 230,
+          "porcion_comestible_pct": 68
+        },
+        {
+          "preparacion": "en mazamorras, en sopas (19 unidades medianas )",
+          "peso_bruto_kg": 3.4,
+          "peso_neto_kg": 2.3,
+          "energia_kcal": 34,
+          "proteina_g": 0.2,
+          "grasa_g": 0,
+          "carbohidrato_g": 9.2,
+          "hierro_mg": 0.1,
+          "retinol_ug": 29,
+          "porcion_comestible_pct": 66
+        }
+      ]
+    },
+    {
+      "orden": 117,
+      "codigo": "DA117",
+      "categoria_id": 11,
+      "nombre": "TORONJA",
+      "dosificaciones": [
+        {
+          "preparacion": "en jugo solo",
+          "peso_bruto_kg": 25,
+          "peso_neto_kg": 18.8,
+          "energia_kcal": 68,
+          "proteina_g": 1.1,
+          "grasa_g": 0.8,
+          "carbohidrato_g": 16.5,
+          "hierro_mg": 3.8,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 75
+        }
+      ]
+    },
+    {
+      "orden": 118,
+      "codigo": "DA118",
+      "categoria_id": 12,
+      "nombre": "AZÚCAR",
+      "dosificaciones": [
+        {
+          "preparacion": "en postre como arroz con leche y mazamorra morada",
+          "peso_bruto_kg": 2,
+          "peso_neto_kg": 2,
+          "energia_kcal": 77,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 19.8,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en preparación de avena con manzana",
+          "peso_bruto_kg": 1.2,
+          "peso_neto_kg": 1.2,
+          "energia_kcal": 46,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 11.9,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en dulce de camote, dulce de higos, compota de fruta",
+          "peso_bruto_kg": 1,
+          "peso_neto_kg": 1,
+          "energia_kcal": 38,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 9.9,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en el café con leche (en refresco)",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.5,
+          "energia_kcal": 58,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 14.9,
+          "hierro_mg": 0,
+          "retinol_ug": 0,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 119,
+      "codigo": "DA119",
+      "categoria_id": 12,
+      "nombre": "CHANCACA",
+      "dosificaciones": [
+        {
+          "preparacion": "en arroz zambito",
+          "peso_bruto_kg": 2.7,
+          "peso_neto_kg": 2.7,
+          "energia_kcal": 9,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 22.4,
+          "hierro_mg": 0.9,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en mazamorra con harina de trigo",
+          "peso_bruto_kg": 1.5,
+          "peso_neto_kg": 1.5,
+          "energia_kcal": 5,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 12.6,
+          "hierro_mg": 0.5,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "en miel para picarones",
+          "peso_bruto_kg": 3,
+          "peso_neto_kg": 3,
+          "energia_kcal": 10,
+          "proteina_g": 0,
+          "grasa_g": 0,
+          "carbohidrato_g": 25.2,
+          "hierro_mg": 1,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    },
+    {
+      "orden": 120,
+      "codigo": "DA120",
+      "categoria_id": 12,
+      "nombre": "COCOA",
+      "dosificaciones": [
+        {
+          "preparacion": "en guisos con menestras",
+          "peso_bruto_kg": 0.2,
+          "peso_neto_kg": 0.2,
+          "energia_kcal": 8,
+          "proteina_g": 0.4,
+          "grasa_g": 0.3,
+          "carbohidrato_g": 1,
+          "hierro_mg": 0.2,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        },
+        {
+          "preparacion": "Aderezo de guisos: cebolla, ajos, cominos, orégano etc. pequeños, aderezados con sal, aceite, vinagre, pimienta y sal.",
+          "peso_bruto_kg": 0.5,
+          "peso_neto_kg": 0.5,
+          "energia_kcal": 24,
+          "proteina_g": 0.7,
+          "grasa_g": 2.4,
+          "carbohidrato_g": null,
+          "hierro_mg": null,
+          "retinol_ug": null,
+          "porcion_comestible_pct": 100
+        }
+      ]
+    }
+  ]
+}
